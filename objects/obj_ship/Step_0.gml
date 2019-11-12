@@ -84,9 +84,7 @@
 		}
 	}
 	else
-	{
 		fire2_cooldown--;
-	}
 	//#endregion
 	
 //#endregion

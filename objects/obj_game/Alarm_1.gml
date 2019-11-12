@@ -12,6 +12,6 @@ if(choose(0, 1) == 0)
 	var xx = irandom_range(0, room_width);
 	var yy = choose(0, room_height);	
 }
-spawn_asteroid(xx, yy);
+spawn_asteroid(xx, yy, -1, -1);
 
 alarm[1] = room_speed * asteroid_spawn_rate;

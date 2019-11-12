@@ -31,11 +31,3 @@ draw_sprite_ext(sprite_index, -1,
 	x, y, 1, 1,
 	image_angle, image_blend, image_alpha
 );
-
-/*
-// draw main player
-draw_sprite_ext(spr_burst, -1,
-	x, y, 1, 1,
-	image_angle, image_blend, image_alpha
-);
-*/

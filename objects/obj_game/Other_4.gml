@@ -1,21 +1,35 @@
 
-if(room == room_game)
+switch(room)
 {
-	if(audio_is_playing(msc_song))
-		audio_stop_sound(msc_song);
-	audio_play_sound(msc_song, 2, true);
-	repeat(starting_asteroids){	
-		var xx = choose(
-			irandom_range(0, room_width * .3),
-			irandom_range(room_width * .7, room_width)
-		);
-		var yy = choose(
-			irandom_range(0, room_height * .3),
-			irandom_range(room_height * .7, room_height)
-		);
-		spawn_asteroid(xx, yy);
-	}
-	
-	alarm[1] = room_speed * asteroid_spawn_rate * (1 + difficulty_multiplier * (score / 100));
-	alarm[2] = room_speed * power_up_spawn_rate;
+	case room_game:
+		if(audio_is_playing(msc_song))
+			audio_stop_sound(msc_song);
+		audio_play_sound(msc_song, 2, true);
+		repeat(starting_asteroids)
+		{	
+			var xx = choose(
+				irandom_range(0, room_width * .3),
+				irandom_range(room_width * .7, room_width)
+			);
+			var yy = choose(
+				irandom_range(0, room_height * .3),
+				irandom_range(room_height * .7, room_height)
+			);
+			spawn_asteroid(xx, yy, -1, -1);
+		}
+		
+		alarm[1] = room_speed * asteroid_spawn_rate * (1 + difficulty_multiplier * (score / 100));
+		alarm[2] = room_speed * power_up_spawn_rate;
+		break;
+	case room_start_menu:
+		start_asteroid = spawn_asteroid(256, 64, spr_asteroid_huge, 5);
+		with(start_asteroid)
+		{
+			speed = 0;
+			rotation_speed = .3;
+			spawn_child = false;
+			debris = 50;
+		}
+		
+		break;
 }

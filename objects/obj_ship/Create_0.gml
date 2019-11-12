@@ -21,7 +21,7 @@ fire1_cooldown_rate = .15; // fire1 cooldown timer rate
 
 // fire2
 fire2_charge = 0;                    // fire2 charge power
-fire2_charge_rate = 4 / room_speed; // fire2 charge rate
+fire2_charge_rate = 4 / room_speed;  // fire2 charge rate
 fire2_max_charge = 5;                // fire2 max charge
 
 fire2_cooldown = 0;        // fire2 cooldown timer
