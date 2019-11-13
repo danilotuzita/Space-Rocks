@@ -8,10 +8,10 @@ var asteroid = instance_create_layer(_x, _y, "Instances", obj_asteroid);
 
 with (asteroid)
 {
-    // if sprite <= 0 then choose a random sprite
-    sprite_index = sprite <= 0 ?
-        choose(spr_asteroid_small, spr_asteroid_medium, spr_asteroid_huge) :
-        sprite;
+    
+    sprite_index = sprite <= 0 ? // if sprite is not provided
+        choose(spr_asteroid_small, spr_asteroid_medium, spr_asteroid_huge) : // choose a random sprite
+        sprite; // sets the provided sprite
     
     // default asteroid health
     switch(sprite_index)
@@ -30,8 +30,11 @@ with (asteroid)
     		break;
     }
     
+    // if the overwrite_health is provided
     if (overwrite_health > 0)
-        asteroid_health = overwrite_health;
+        asteroid_health = overwrite_health; // sets the health
+    
+    asteroid_max_health = asteroid_health; // saves the max_health
 }
 
 return asteroid;

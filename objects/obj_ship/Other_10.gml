@@ -1,6 +1,7 @@
 /// @description Reset player
-is_dead = is_dead_delay * room_speed;
+is_dead = is_dead_delay * room_speed; // set as dead
 
+// reseting cooldowns
 fire1_cooldown = 0;
 fire2_cooldown = 0;
 fire2_charge = 0;

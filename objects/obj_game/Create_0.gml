@@ -3,7 +3,6 @@
 score = 0;
 lives = 3;
 
-// draw_set_font(fnt_text);
 starting_asteroids = 3; // how many asteroids the game starts
 asteroid_spawn_rate = 6; // seconds between asteroid spawning
 

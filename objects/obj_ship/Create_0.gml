@@ -52,7 +52,7 @@ for(var i = 0; i < dash_trail_amount; i++) // init trail matrix
 }
 
 // effects
-move_trail_rate = 2;
-move_trail_amount = 2;
+move_trail_rate = 2;   // spawn a trail tick interval
+move_trail_amount = 2; // amount of trails to spawn
 
-dead_blink_rate = 5;
+dead_blink_rate = 5; // blinking tick interval

@@ -1,6 +1,4 @@
-/// @description Tick for debris
+image_alpha	-= fade_rate; // fades it
 
-image_alpha	-= fade_rate;
-
-if(image_alpha <= 0)
-	instance_destroy();
+if(image_alpha <= 0) // if is not visible anymore
+	instance_destroy(); // destroy it

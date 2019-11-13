@@ -6,4 +6,5 @@ rotation_speed = random_range(1, 2);
 debris = 10;
 spawn_child = true;
 asteroid_health = 1;
+asteroid_max_health = 1;
 crack = true;

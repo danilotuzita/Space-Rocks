@@ -1,11 +1,11 @@
-
+// on switch rooms event
 switch(room)
 {
 	case room_game:
 		if(audio_is_playing(msc_song))
 			audio_stop_sound(msc_song);
 		audio_play_sound(msc_song, 2, true);
-		repeat(starting_asteroids)
+		repeat(starting_asteroids) // generates starting_asteroids
 		{	
 			var xx = choose(
 				irandom_range(0, room_width * .3),
@@ -18,11 +18,12 @@ switch(room)
 			spawn_asteroid(xx, yy, -1, -1);
 		}
 		
-		alarm[1] = room_speed * asteroid_spawn_rate * (1 + difficulty_multiplier * (score / 100));
-		alarm[2] = room_speed * power_up_spawn_rate;
+		// setting alarms
+		alarm[1] = room_speed * asteroid_spawn_rate * (1 + difficulty_multiplier * (score / 100)); // asteroid spawning alarm
+		alarm[2] = room_speed * power_up_spawn_rate; // power up spawning alarm
 		break;
 	case room_start_menu:
-		start_asteroid = spawn_asteroid(256, 64, spr_asteroid_huge, 5);
+		start_asteroid = spawn_asteroid(256, 64, spr_asteroid_huge, 10);
 		with(start_asteroid)
 		{
 			speed = 0;
@@ -30,6 +31,5 @@ switch(room)
 			spawn_child = false;
 			debris = 50;
 		}
-		
 		break;
 }

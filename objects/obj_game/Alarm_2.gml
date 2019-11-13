@@ -1,7 +1,7 @@
 /// @description Power up spawning
-if(room != room_game)
-	exit;
+if(room != room_game) exit;
 
+// randomizing the power up
 if(choose(0, 1) == 0)
 {
 	// go down the side

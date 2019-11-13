@@ -1,17 +1,16 @@
 # GAME:
 	* Explosion after the main menu asteroid destruction
-	* Death cam
+	* Death room
 	* Come up with a way to represent how many lives you have and the score
 
 # obj_game:
 	* Needs comments
 
 # obj_ship:
-	* Needs some code cleanup and comments (mainly fire2)
+	* Needs some code cleanup and comments (mainly draw.fire2_charge)
 
 # obj_asteroid:
 	* Needs comments
 
 # obj_bullet:
-	* Fix: fire2 is destroying the main menu asteroid instantly
 	# Needs comments

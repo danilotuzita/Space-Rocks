@@ -1,7 +1,7 @@
 /// @description Asteroid spawning
-if(room != room_game)
-	exit;
+if(room != room_game) exit;
 
+// randomizing the new asteroid
 if(choose(0, 1) == 0)
 {
 	// go down the side

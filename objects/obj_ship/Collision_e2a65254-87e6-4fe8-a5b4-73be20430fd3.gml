@@ -1,4 +1,4 @@
-lives++;
+lives++; // increases a life
 
-with(other)
+with(other) // destroy the power up
 	instance_destroy();
