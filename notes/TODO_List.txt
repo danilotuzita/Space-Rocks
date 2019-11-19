@@ -7,10 +7,11 @@
 	* Needs comments
 
 # obj_ship:
-	* Needs some code cleanup and comments (mainly draw.fire2_charge)
+	* Needs some code cleanup and comments (mainly draw.fire2_charge) // Oh man I just made it worse =p
 
 # obj_asteroid:
 	* Needs comments
 
 # obj_bullet:
-	# Needs comments
+	* Needs comments
+	* implement pass through (probably need to make the asteroid untouchable for a while)

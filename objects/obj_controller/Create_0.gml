@@ -22,3 +22,7 @@ leftAngle = 0;
 leftIntensity = 0;
 rightAngle = 0;
 rightIntensity = 0;
+
+
+leftDeadZone = .5;
+rightDeadZone = .5;

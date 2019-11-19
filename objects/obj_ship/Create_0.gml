@@ -17,7 +17,7 @@ is_dead_delay = 2; // invincible after death time
 
 // fire1
 fire1_cooldown = 0;        // fire1 cooldown timer
-fire1_cooldown_rate = .15; // fire1 cooldown timer rate
+fire1_cooldown_rate = .20; // fire1 cooldown timer rate
 
 // fire2
 fire2_charge = 0;                    // fire2 charge power

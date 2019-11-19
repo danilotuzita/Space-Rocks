@@ -10,4 +10,7 @@ with(other)
 if (bounce-- <= 0) // checks if needs to be destroyed decreases bounce count
 	event_user(0); // destroy
 else
-	direction = -direction; // inverts direction
+{
+	direction = -direction;     // inverts direction
+	image_angle = -image_angle; // inverts angle
+}

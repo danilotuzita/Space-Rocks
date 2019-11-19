@@ -8,7 +8,7 @@
 	//#endregion
 	
 	//#region rotation
-	if (controller.rightIntensity > .5)	image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
+	if (controller.rightIntensity > controller.rightDeadZone) image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
 	//#endregion
 	
 	//#region dash
@@ -78,12 +78,19 @@
 			fire2_cooldown = fire2_cooldown_rate * room_speed; // sets fire2 cooldown
 			with(fire_bullet(x, y, image_angle, 1)) // creates the bullet
 			{
-				image_xscale = 2.5; // scales the bullet
-				image_yscale = 2.5;
-				image_angle = 45;
-				bounce = other.fire2_charge - 1; // sets the bounce
+				/*image_xscale = 2.5; // scales the bullet
+				image_yscale = 2.5;*/
+				
+				image_yscale = ratio(other.fire2_charge, 0, other.fire2_max_charge, 10, 1);
+				// image_yscale = image_xscale;
+				image_angle = other.image_angle;
+				
+				damage = other.fire2_charge;
+				speed = 5 * 1 + damage;
+				bounce = damage - 1;             // sets the bounce
 				can_wrap = true;                 // sets room wraping
 				life_time = 5 * room_speed;      // sets lifetime
+				debris = 3;                      // sets debris amount
 			}
 			
 			fire2_charge = 0; // zero the charge

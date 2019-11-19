@@ -6,8 +6,9 @@ switch(room)
 	//#endregion
 	//#region Game
 	case room_game:	
-		draw_text(20, 20, "SCORE: "+ string(score));
-		draw_text(20, 50, "LIVES: "+ string(lives));
+		draw_text(20, 20, "SCORE: " + string(score));
+		// draw_text(20, 50, "LIVES: "+ string(lives));
+		draw_text(20, 50, "NEXT ASTEROID: " + string(alarm[1]))
 		break;
 	//#endregion
 	//#region Win
