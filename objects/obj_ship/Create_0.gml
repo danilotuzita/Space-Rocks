@@ -27,6 +27,12 @@ fire2_max_charge = 5;                // fire2 max charge
 fire2_cooldown = 0;        // fire2 cooldown timer
 fire2_cooldown_rate = 1.0; // fire2 cooldown timer rate
 
+// fire3
+fire3_cooldown = 0;        // fire3 cooldown timer
+fire3_cooldown_rate = .50; // fire3 cooldown timer rate
+fire3_bullet_count = 3;    // fire3 bullet amount
+fire3_spread = 7;          // fire3 bullet spread
+
 // dash
 dashing = false;             // stores if the player is dashing state
 dash_speed_multiplier = 1.5; // speed multiplier while dashing

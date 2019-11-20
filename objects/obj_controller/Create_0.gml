@@ -9,9 +9,6 @@ accept = false;
 cancel = false;
 pause = false;
 
-fire = false;
-dash = false;
-
 // Rectangular coordinates
 leftX = 0;
 leftY = 0;

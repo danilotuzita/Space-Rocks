@@ -183,6 +183,20 @@
             "varType": 4
         },
         {
+            "id": "d1bf14e5-8bab-4b39-8072-fff736d97c29",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "gp_shoulderl",
+            "varName": "inp_fire3",
+            "varType": 4
+        },
+        {
             "id": "b9b588b6-a9da-475b-b8c1-fca6cd13223d",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",

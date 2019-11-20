@@ -2,16 +2,20 @@
 	* Explosion after the main menu asteroid destruction
 	* Death room
 	* Come up with a way to represent how many lives you have and the score
+	* Idea: Walkable Space
+	* Balance dash
 
 # obj_game:
 	* Needs comments
+	* Fix initial Asteroids to spawn on the edge of the screen
 
 # obj_ship:
 	* Needs some code cleanup and comments (mainly draw.fire2_charge) // Oh man I just made it worse =p
+		- Almost fixed just need to be sure if this animation is better (it kinda looks the same :/)
+	* Needs to come up with something to show the cooldown
 
 # obj_asteroid:
 	* Needs comments
 
 # obj_bullet:
-	* Needs comments
 	* implement pass through (probably need to make the asteroid untouchable for a while)

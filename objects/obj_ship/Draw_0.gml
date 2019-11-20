@@ -12,6 +12,7 @@ for(var j = 0; j < dash_trail_amount; j++) // for every trail sprite
 
 if(fire2_charge > 0) // draws the charging fire2 effect
 {
+	/*
 	// ok... this is confusing
 	var animation_tick = tick / room_speed;
 	var charge_ratio = (fire2_charge / fire2_max_charge) * 0.9;
@@ -19,12 +20,25 @@ if(fire2_charge > 0) // draws the charging fire2 effect
 	
 	// TODO: THINK OF A BETTER SOLUTION FOR THE SCALING
 	var s = .75 + ((w - 0.9) * (fire2_charge == fire2_max_charge));
+	*/
+	var alpha, scale, rotation;
+	rotation = 3;//; ratio(fire2_charge, 0, 5, 10, 3);
+	
+	if(fire2_charge != fire2_max_charge)
+	{
+		alpha = ratio(fire2_charge, 0, 5,  0,   1);
+		scale = ratio(fire2_charge, 0, 5, .5, .75);
+		wave_offset = tick;
+	} else {
+		alpha = 1;
+		scale = wave(.75, .9, 1, wave_offset, tick);
+	}
 	
 	// draws the charging effect sprite
-	draw_sprite_ext(spr_eff_charge_up, animation_tick * 4,
-		x, y, s, s,
-		image_angle + (fire2_charge * 45), // spin sprite
-		image_blend, image_alpha * w
+	draw_sprite_ext(spr_eff_charge_up, tick / 16,
+		x, y, scale, scale,
+		/*image_angle +*/ (tick * rotation),
+		image_blend, image_alpha * alpha
 	);
 	
 	// this should go away eventually

@@ -1,13 +1,20 @@
-//wave(from, to, duration, offset)
- 
-// Returns a value that will wave back and forth between [from-to] over [duration] seconds
-// Examples
-//      image_angle = Wave(-45,45,1,0)  -> rock back and forth 90 degrees in a second
-//      x = Wave(-10,10,0.25,0)         -> move left and right quickly
- 
-// Or here is a fun one! Make an object be all squishy!! ^u^
-//      image_xscale = Wave(0.5, 2.0, 1.0, 0.0)
-//      image_yscale = Wave(2.0, 0.5, 1.0, 0.0)
- 
-var a4 = (argument1 - argument0) * 0.5;
-return argument0 + a4 + sin((((current_time * 0.001) + argument2 * argument3) / argument2) * (pi*2)) * a4;
+/// @param from
+/// @param to
+/// @param duration
+/// @param offset
+/// @param tick
+var from = argument0, to = argument1, duration = argument2, offset = argument3, tick = argument4;
+
+var wave_tick = 
+(
+    (tick - offset)  // "time" in cos curve
+    / room_speed // converting to seconds
+) / duration; // normalizing to the duration
+
+var _cos = (
+    -cos((wave_tick * 2 * pi)) // converting to radian (negative cos: so that the curve starts at -1)
+    + 1 // offsets the cos curve to be above 0
+) / 2; // normalize between [0,1]
+
+// delta * ratio on cos curve + offsets back the origin
+return (to - from) * _cos + from;

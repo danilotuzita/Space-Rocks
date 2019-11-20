@@ -1,4 +1,5 @@
 //#region Player Input Handling
+	if (controller.pause) game_end();
 	//#region movement
 	var _x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
 	var _y =  controller.down - controller.up   + controller.leftY; // dpad up/down    + vertical axis
@@ -53,12 +54,25 @@
 	}
 	//#endregion
 	
+	//#region fire3
+	// if pressed fire3, can fire and is not charging fire2
+	if(controller.fire3 && fire3_cooldown <= 0 && !fire2_charge)
+	{
+		fire3_cooldown = fire3_cooldown_rate * room_speed; // sets fire2 cooldown
+		var half = fire3_bullet_count / 2;
+		for(var i = -half; i < half; i++)
+			with(fire_bullet(x, y, image_angle + (i * fire3_spread), .5)) // creates the bullet
+				image_alpha = .75;
+	}
+	//#endregion
+	
 	//#region fire1
 	// if pressed fire1, can fire and is not charging fire2
-	if(controller.fire1 && fire1_cooldown <= 0 && !fire2_charge)
+	if(controller.fire1 && fire1_cooldown <= 0 && !fire2_charge && fire3_cooldown <= 0)
 	{
 		fire1_cooldown = fire1_cooldown_rate * room_speed; // sets fire1 cooldown
-		fire_bullet(x, y, image_angle, 1); // creates the bullet
+		with(fire_bullet(x, y, image_angle, 1)) // creates the bullet
+			image_xscale = 2;
 	}
 	//#endregion
 	
@@ -78,19 +92,16 @@
 			fire2_cooldown = fire2_cooldown_rate * room_speed; // sets fire2 cooldown
 			with(fire_bullet(x, y, image_angle, 1)) // creates the bullet
 			{
-				/*image_xscale = 2.5; // scales the bullet
-				image_yscale = 2.5;*/
+				var charge = other.fire2_charge;
 				
-				image_yscale = ratio(other.fire2_charge, 0, other.fire2_max_charge, 10, 1);
-				// image_yscale = image_xscale;
-				image_angle = other.image_angle;
+				image_xscale = ratio(charge, 0, 5, 2, 4);
+				speed = ratio(charge, 0, 5, 7, 10);
+				damage = charge;
 				
-				damage = other.fire2_charge;
-				speed = 5 * 1 + damage;
-				bounce = damage - 1;             // sets the bounce
-				can_wrap = true;                 // sets room wraping
-				life_time = 5 * room_speed;      // sets lifetime
-				debris = 3;                      // sets debris amount
+				life_time = .75 * room_speed;
+				bounce = 5;      // sets the bounce
+				can_wrap = true; // sets room wraping
+				debris = 3;      // sets debris amount
 			}
 			
 			fire2_charge = 0; // zero the charge

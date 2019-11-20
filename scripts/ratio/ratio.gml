@@ -14,4 +14,3 @@ return
         (input - in_min) / (in_max - in_min) // normalizing and getting ratio of the input value
     ) * (out_max - out_min) // output ratio
 ) + out_min; // adding output offset
-

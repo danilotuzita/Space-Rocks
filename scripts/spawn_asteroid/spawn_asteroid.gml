@@ -17,7 +17,7 @@ with (asteroid)
     switch(sprite_index)
     {
     	case spr_asteroid_small:
-    		asteroid_health = 1;
+    		asteroid_health = .5;
     		break;
     	case spr_asteroid_medium:
     		asteroid_health = 3;
