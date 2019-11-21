@@ -1,4 +1,5 @@
-if (last_collision == other) return; // if it already collided with this asteroid, do nothing
+if (last_collision == other && last_collision_timer > 0) // if it already collided with this asteroid
+	return; // do nothing
 
 score += 10;
 life_time += room_speed; // increase its life time
@@ -10,6 +11,7 @@ with(other)
 	image_alpha = 0; // apply blinking effect to the asteroid
 }
 last_collision = other;
+last_collision_timer = .3 * room_speed;
 
 if (bounce-- <= 0) // checks if needs to be destroyed decreases bounce count
 	event_user(0); // destroy

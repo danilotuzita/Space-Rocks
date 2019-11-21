@@ -57,4 +57,8 @@ switch(room)
 		draw_set_halign(fa_left);
 		break;
 	//#endregion
+	case room_space:
+		break;
+	default:
+		break;
 }

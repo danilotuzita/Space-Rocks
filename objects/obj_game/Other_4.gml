@@ -32,4 +32,8 @@ switch(room)
 			debris = 50;
 		}
 		break;
+	case room_space:
+		break;
+	default:
+		break;
 }

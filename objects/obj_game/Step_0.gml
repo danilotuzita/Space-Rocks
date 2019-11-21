@@ -24,4 +24,6 @@ switch(room)
 		if(keyboard_check_pressed(vk_enter) || gamepad_button_check(0, gp_face1))
 			game_restart(); // restarts the game
 		break;
+	case room_space:
+		break;
 }

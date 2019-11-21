@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0e97bfb6-dac9-47d1-83b1-246a22128d1a",
+            "Value": {
+                "id": "5f254051-3ae7-4bff-b30c-58174c3d3b4d",
+                "resourcePath": "sprites\\spr_space\\spr_space.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0f0ec7bd-9864-48cb-b7ac-2e88491fc5df",
             "Value": {
                 "id": "6c0375dd-63d9-4882-be3e-c9827afe1a23",
@@ -444,6 +452,14 @@
                 "id": "2d7ec56b-b97e-4dfe-a1f6-5c16efaff183",
                 "resourcePath": "objects\\obj_game\\obj_game.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e1931c2f-cb6b-4053-bd23-5b1c3f91fb06",
+            "Value": {
+                "id": "2bb1954c-c9e7-4f6d-af59-aa6414c76909",
+                "resourcePath": "rooms\\room_space\\room_space.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
