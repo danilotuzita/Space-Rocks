@@ -1,3 +1,5 @@
+global.player = self;
+last_asteroid = 9999;
 // init
 starting_x = room_width / 2;
 starting_y = room_height / 2;
@@ -6,7 +8,8 @@ x = starting_x;
 y = starting_y;
 base_move_speed = 5;
 move_speed = base_move_speed;
-controller = instance_create_layer(0, 0, "Instances", obj_controller);
+controller = create_controller(self);
+hud = create_hud(self);
 
 // variables set up
 tick = 0; // tick counter
@@ -38,10 +41,10 @@ dashing = false;             // stores if the player is dashing state
 dash_speed_multiplier = 1.5; // speed multiplier while dashing
 
 dash_cooldown = 0;       // dash cooldown timer
-dash_cooldown_rate = 1;  // dash cooldown timer rate
+dash_cooldown_rate = 2;  // dash cooldown timer rate
 
 dash_time = 0;      // is dashing timer
-dash_max_time = .5; // dashing timer max (how many seconds the player can dash)
+dash_max_time = 1.5; // dashing timer max (how many seconds the player can dash)
 
 dash_trail_amount = 6;   // amount of saved trails
 dash_trail_interval = 2; // interval of ticks between trail sprite saves

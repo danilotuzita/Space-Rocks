@@ -1,6 +1,8 @@
 if (last_collision == other && last_collision_timer > 0) // if it already collided with this asteroid
 	return; // do nothing
 
+global.player.last_asteroid = other;
+
 score += 10;
 life_time += room_speed; // increase its life time
 audio_play_sound(snd_die, 1, false);

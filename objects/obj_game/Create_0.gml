@@ -1,5 +1,5 @@
 /// @description Game Create
-
+global.game = self;
 score = 0;
 lives = 3;
 

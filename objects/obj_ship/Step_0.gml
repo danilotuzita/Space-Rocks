@@ -2,7 +2,7 @@
 	if (controller.pause) game_end();
 	//#region movement
 	var _x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
-	var _y =  controller.down - controller.up   + controller.leftY; // dpad up/down    + vertical axis
+	var _y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
 	move_towards_point(x + _x, y + _y, move_speed * (_x * _x || _y * _y)); // move towards the new position with move_speed
 	// (_x * _x || _y * _y): checks if _x^2 or _y^2 is true
 	// further note: for some reason in GM negative values are false, therefore the power
@@ -18,9 +18,11 @@
 		if(dash_time <= 0 || controller.dash_released) // if can't continue dashing or dash button was released
 		{
 			dashing = false; // disable dashing state
-			dash_cooldown = dash_cooldown_rate * room_speed; // start dash cooldown
+			dash_cooldown = ratio(
+				dash_time, 0, dash_max_time * room_speed,
+				dash_cooldown_rate * room_speed, 0 
+			); // start dash cooldown
 			move_speed = base_move_speed; // return to base move_speed
-			image_blend = c_yellow; // change color to yellow (charging dash)
 		}
 		
 		if(dash_time % dash_trail_interval == 0) // save trail position
@@ -40,13 +42,13 @@
 	{
 		if(dash_cooldown <= 0) // if can dash
 		{
-			image_blend = c_white; // change color to white (can dash)
+			// image_blend = c_white; // change color to white (can dash)
 			if(controller.dash_pressed) // if dash button was pressed
 			{
 				dashing = true; // enable dashing state
 				dash_time = dash_max_time * room_speed; // setting timer for dash state
 				move_speed *= dash_speed_multiplier; // increase move_speed
-				image_blend = c_red; // change color to red (is dashing)
+				// image_blend = c_red; // change color to red (is dashing)
 			}
 		}
 		

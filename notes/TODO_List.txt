@@ -1,9 +1,7 @@
 # GAME:
 	* Explosion after the main menu asteroid destruction
 	* Death room
-	* Come up with a way to represent how many lives you have and the score
 	* Idea: Walkable Space
-	* Balance dash
 
 # obj_game:
 	* Needs comments
@@ -19,3 +17,8 @@
 
 # obj_bullet:
 	* implement pass through (probably need to make the asteroid untouchable for a while)
+
+# obj_hud:
+	* Come up with a way to represent how many lives you have and the score
+		- There is the Kin char for the score
+		- Lives should be simple just put some spaceships icons somewhere
