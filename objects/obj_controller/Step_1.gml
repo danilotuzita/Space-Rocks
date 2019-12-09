@@ -13,6 +13,7 @@ fire2_pressed = gamepad_button_check_pressed(device, inp_fire2);
 fire2_released = gamepad_button_check_released(device, inp_fire2);
 fire3 = gamepad_button_check(device, inp_fire3);
 
+dash = gamepad_button_check(device, inp_dash);
 dash_pressed = gamepad_button_check_pressed(device, inp_dash);
 dash_released = gamepad_button_check_released(device, inp_dash);
 

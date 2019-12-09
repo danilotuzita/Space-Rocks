@@ -40,11 +40,9 @@ fire3_spread = 7;          // fire3 bullet spread
 dashing = false;             // stores if the player is dashing state
 dash_speed_multiplier = 1.5; // speed multiplier while dashing
 
-dash_cooldown = 0;       // dash cooldown timer
-dash_cooldown_rate = 2;  // dash cooldown timer rate
-
-dash_time = 0;      // is dashing timer
-dash_max_time = 1.5; // dashing timer max (how many seconds the player can dash)
+dash_fuel = 1; // amont of dash fuel
+dash_consumption_rate = 1 / room_speed; // fuel consumption rate while dashing
+dash_recharge_rate = .1 / room_speed; // fuel recharge rate
 
 dash_trail_amount = 6;   // amount of saved trails
 dash_trail_interval = 2; // interval of ticks between trail sprite saves

@@ -12,20 +12,17 @@
 	if (controller.rightIntensity > controller.rightDeadZone) image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
 	//#endregion
 	
-	//#region dash
-	if(dashing)
+	if (keyboard_check_pressed(ord("A"))) lives++;
+	if (keyboard_check_pressed(ord("S"))) lives--;
+	
+	#region dash
+	if (controller.dash && dash_fuel > 0)
 	{
-		if(dash_time <= 0 || controller.dash_released) // if can't continue dashing or dash button was released
-		{
-			dashing = false; // disable dashing state
-			dash_cooldown = ratio(
-				dash_time, 0, dash_max_time * room_speed,
-				dash_cooldown_rate * room_speed, 0 
-			); // start dash cooldown
-			move_speed = base_move_speed; // return to base move_speed
-		}
+		dashing = true;
+		dash_fuel -= dash_consumption_rate;
+		move_speed = base_move_speed * dash_speed_multiplier;
 		
-		if(dash_time % dash_trail_interval == 0) // save trail position
+		if(tick % dash_trail_interval == 0) // save trail position
 		{
 			dash_trail_grid[# 0, dash_trail_index] = x;
 			dash_trail_grid[# 1, dash_trail_index] = y;
@@ -35,26 +32,14 @@
 			dash_trail_index++; // increase trail index
 			dash_trail_index %= dash_trail_amount; // assert the dash_trail_index is between 0 and dash_trail_amount
 		}
-		
-		dash_time--; // decreases dash timer
-	}
-	else
+	} 
+	if (controller.dash_released || dash_fuel <= 0)
 	{
-		if(dash_cooldown <= 0) // if can dash
-		{
-			// image_blend = c_white; // change color to white (can dash)
-			if(controller.dash_pressed) // if dash button was pressed
-			{
-				dashing = true; // enable dashing state
-				dash_time = dash_max_time * room_speed; // setting timer for dash state
-				move_speed *= dash_speed_multiplier; // increase move_speed
-				// image_blend = c_red; // change color to red (is dashing)
-			}
-		}
-		
-		dash_cooldown--; // decreases dash cooldown
+		dash_fuel -= .2 * dashing;
+		dashing = false;
+		move_speed = base_move_speed;
 	}
-	//#endregion
+	#endregion
 	
 	//#region fire3
 	// if pressed fire3, can fire and is not charging fire2

@@ -23,7 +23,7 @@ switch(room)
 		alarm[2] = room_speed * power_up_spawn_rate; // power up spawning alarm
 		break;
 	case room_start_menu:
-		start_asteroid = spawn_asteroid(256, 64, spr_asteroid_huge, 10);
+		start_asteroid = spawn_asteroid(250, 64, spr_asteroid_huge, 10);
 		with(start_asteroid)
 		{
 			speed = 0;
