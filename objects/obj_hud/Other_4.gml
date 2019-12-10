@@ -10,6 +10,8 @@ switch(room)
         draw_kin = true;
         draw_lives = true;
         draw_dashbar = true;
+        draw_f2chargebar = true;
+        
         draw_aim = true;
         break;
     case room_space:

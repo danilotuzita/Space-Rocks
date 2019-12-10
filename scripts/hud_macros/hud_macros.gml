@@ -2,8 +2,6 @@
 #macro HUD_STYLE_CLASSIC 1
 #macro HUD_STYLE_BLOCK 2
 
-#macro HUD_STYLE HUD_STYLE_BLOCK
-
 // SPRITE IMG INDEX MACROS
 // icon
 #macro HUD_ICON_KIN 0
@@ -12,3 +10,10 @@
 // dashbar
 #macro HUD_DASHBAR_OUTLINE 0
 #macro HUD_DASHBAR_FILL 1
+#macro HUD_DASHBAR_ICON 2
+
+// chargebar
+#macro HUD_CHARGEBAR_OUTLINE 0
+#macro HUD_CHARGEBAR_FILL 1
+// chargebar icons
+#macro HUD_CHARGEBAR_ICON_FIRE2 0

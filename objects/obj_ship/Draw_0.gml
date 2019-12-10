@@ -27,11 +27,11 @@ if(fire2_charge > 0) // draws the charging fire2 effect
 	if(fire2_charge != fire2_max_charge)
 	{
 		alpha = ratio(fire2_charge, 0, 5,  0,   1);
-		scale = ratio(fire2_charge, 0, 5, .5, .75);
+		scale = ratio(fire2_charge, 0, 5, .25, .5);
 		wave_offset = tick;
 	} else {
 		alpha = 1;
-		scale = wave(.75, .9, 1, wave_offset, tick);
+		scale = wave(.5, .75, 1, wave_offset, tick);
 	}
 	
 	// draws the charging effect sprite
@@ -41,8 +41,6 @@ if(fire2_charge > 0) // draws the charging fire2 effect
 		image_blend, image_alpha * alpha
 	);
 	
-	// this should go away eventually
-	draw_text(room_width / 2, 20, string(round(fire2_charge)));
 }
 
 // draw player sprite

@@ -1,8 +1,8 @@
 //#region Player Input Handling
 	if (controller.pause) game_end();
 	//#region movement
-	var _x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
-	var _y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
+	_x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
+	_y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
 	move_towards_point(x + _x, y + _y, move_speed * (_x * _x || _y * _y)); // move towards the new position with move_speed
 	// (_x * _x || _y * _y): checks if _x^2 or _y^2 is true
 	// further note: for some reason in GM negative values are false, therefore the power

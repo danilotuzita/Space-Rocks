@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "16734356-e996-4324-a375-ca869af3008d",
+            "Value": {
+                "id": "f6518b9e-ad70-496b-9416-ed26c7e0be9a",
+                "resourcePath": "sprites\\spr_chargebar_block\\spr_chargebar_block.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18e3538c-6543-3934-2eec-c1614301f439",
             "Value": {
                 "id": "156337a0-3ce5-66e2-31dd-2b5666fe0ac0",
@@ -215,6 +223,14 @@
             }
         },
         {
+            "Key": "47e011f3-777d-4e15-b4d3-be0d05778bbd",
+            "Value": {
+                "id": "ac221b88-d4eb-46f7-a12e-477fa57b5e87",
+                "resourcePath": "sprites\\spr_chargebar_icons\\spr_chargebar_icons.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "489117ac-0df4-46b8-8b26-482dfb6a7aab",
             "Value": {
                 "id": "882eecd6-33fe-4b8b-9ee1-f3cd23b05c5e",
@@ -258,7 +274,7 @@
             "Key": "5872a9e4-872c-3105-165e-201dc3c460ae",
             "Value": {
                 "id": "089d15f9-7d8e-e2fb-29aa-51a68ff3a30b",
-                "resourcePath": "scripts/hud_macros/hud_macros.yy",
+                "resourcePath": "scripts\/hud_macros\/hud_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -298,7 +314,7 @@
             "Key": "6b2d6c6b-1178-e2f4-de59-77eaa612e26f",
             "Value": {
                 "id": "3ca13a82-0c76-12a1-116d-5cff7231ba7c",
-                "resourcePath": "scripts/fire_bullet/fire_bullet.yy",
+                "resourcePath": "scripts\/fire_bullet\/fire_bullet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -332,6 +348,14 @@
                 "id": "7b4a93b7-ca18-4bd9-99b9-f8074035b344",
                 "resourcePath": "views\\708736bf-3825-455a-ba72-f30ece0cc366.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "72b325c3-c07e-4df6-9ce9-0f53714cd1d2",
+            "Value": {
+                "id": "a308dabd-7207-4b15-b989-b40a4dd654f1",
+                "resourcePath": "sprites\\spr_chargebar_icons_block\\spr_chargebar_icons_block.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -452,6 +476,14 @@
                 "id": "0ddc5d70-df93-4d82-bd72-d7fa9785425c",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aa98b7c3-4882-4baf-93a9-667f5e975021",
+            "Value": {
+                "id": "8fa60d8c-011b-4b6d-b18d-4e1092713427",
+                "resourcePath": "sprites\\spr_chargebar\\spr_chargebar.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

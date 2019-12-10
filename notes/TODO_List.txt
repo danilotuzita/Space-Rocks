@@ -22,7 +22,3 @@
 	* Come up with a way to represent how many lives you have and the score
 		- There is the Kin char for the score
 		- Lives should be simple just put some spaceships icons somewhere
-
-# spr_dashbar:
-	* redraw??
-
