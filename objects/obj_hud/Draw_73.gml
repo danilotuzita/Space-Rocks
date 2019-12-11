@@ -42,3 +42,8 @@ switch(room)
     default:
         break;
 }
+
+
+if(DEBUG)
+    draw_text(0, room_height - 10, string(d));
+

@@ -1,3 +1,5 @@
+#macro DEBUG true
+
 // STYLE MACROS
 #macro HUD_STYLE_CLASSIC 1
 #macro HUD_STYLE_BLOCK 2
@@ -6,6 +8,8 @@
 // icon
 #macro HUD_ICON_KIN 0
 #macro HUD_ICON_LIVES 1
+#macro HUD_ICON_FIRE1_HINT 2
+#macro HUD_ICON_FIRE3_HINT 3
 
 // dashbar
 #macro HUD_DASHBAR_OUTLINE 0
@@ -17,3 +21,13 @@
 #macro HUD_CHARGEBAR_FILL 1
 // chargebar icons
 #macro HUD_CHARGEBAR_ICON_FIRE2 0
+
+// SPRITE IMG INDEX CONTROLS
+#macro HUD_CONTROL_A  0
+#macro HUD_CONTROL_B  1
+#macro HUD_CONTROL_X  2
+#macro HUD_CONTROL_Y  3
+#macro HUD_CONTROL_RB 4
+#macro HUD_CONTROL_LB 5
+#macro HUD_CONTROL_LT 6
+#macro HUD_CONTROL_RT 7

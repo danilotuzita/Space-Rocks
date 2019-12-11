@@ -19,6 +19,10 @@ switch(hud_style)
         f2chargebar_x = room_width - f2chargebar_width - 16;
         f2chargebar_y = room_height - f2chargebar_height - 16;
         
+        controls_sprite = spr_controls_block;
+        hint_fire1_x = room_width - 64 - 16 - 8;
+        hint_fire1_y = room_height - 32;
+        
         break;
     case HUD_STYLE_CLASSIC:
     default:

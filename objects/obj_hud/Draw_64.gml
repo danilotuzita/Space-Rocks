@@ -64,7 +64,12 @@ if(draw_f2chargebar)
 {
     var charge_ratio = ratio(
         parent.fire2_charge, 0, parent.fire2_max_charge,
-        f2chargebar_height, 1
+        f2chargebar_height, 0
+    );
+    
+    var cooldown_rate = ratio(
+        parent.fire2_cooldown, 0, parent.fire2_cooldown_rate * room_speed,
+        1, 0
     );
     
     // REF: https://forum.yoyogames.com/index.php?threads/solved-fill-up-effect-drawing.40400/
@@ -84,10 +89,36 @@ if(draw_f2chargebar)
         0, hud_color, hud_alpha
     );
     
-    draw_sprite_ext( // drawing icon
+    draw_sprite_part_ext( // drawing icon
         f2chargebar_icon_sprite, HUD_CHARGEBAR_ICON_FIRE2,
+        0, 0,
+        f2chargebar_width, f2chargebar_height * cooldown_rate,
         f2chargebar_x + x_shake_fgr, f2chargebar_y + y_shake_fgr,
-        1, 1, 
-        0, hud_color, hud_alpha + .2
+        1, 1,
+        hud_color, hud_alpha + .2
     );
 }
+
+/*
+if(draw_fire1hint)
+{
+    draw_rectangle(
+        hint_fire1_x - 13 - 1, hint_fire1_y - 13 - 1,
+        hint_fire1_x + 13 + 2, hint_fire1_y + 13 + 2, true
+    );
+    
+    draw_sprite_ext(
+        icons_sprite, HUD_ICON_FIRE1_HINT,
+        hint_fire1_x, hint_fire1_y,
+        2, 2, 1,
+        hud_color, hud_alpha
+    );
+    
+    draw_sprite_ext(
+        controls_sprite, HUD_CONTROL_RB,
+        hint_fire1_x, hint_fire1_y - 32 - 8,
+        2, 2, 1,
+        hud_color, hud_alpha
+    );
+}
+*/

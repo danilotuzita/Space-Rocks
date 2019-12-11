@@ -28,7 +28,7 @@ fire2_charge_rate = 4 / room_speed;  // fire2 charge rate
 fire2_max_charge = 5;                // fire2 max charge
 
 fire2_cooldown = 0;        // fire2 cooldown timer
-fire2_cooldown_rate = 1.0; // fire2 cooldown timer rate
+fire2_cooldown_rate = 1.5; // fire2 cooldown timer rate
 
 // fire3
 fire3_cooldown = 0;        // fire3 cooldown timer

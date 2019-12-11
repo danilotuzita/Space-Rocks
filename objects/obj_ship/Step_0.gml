@@ -1,5 +1,5 @@
 //#region Player Input Handling
-	if (controller.pause) game_end();
+	if (controller.pause || keyboard_check(vk_escape)) game_end();
 	//#region movement
 	_x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
 	_y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
