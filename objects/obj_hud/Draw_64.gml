@@ -6,7 +6,11 @@ var y_shake_fgr = parent._y * hud_mvt_shake_fgr;
 if(draw_kin)
 {
     draw_sprite_ext(icons_sprite, HUD_ICON_KIN, 20 + x_shake_bkg, 20 + y_shake_bkg, kin_scale, kin_scale, 0, hud_color, hud_alpha);
+    
+    draw_set_color(hud_color);
     draw_text(37 + x_shake_bkg, 14 + y_shake_bkg, string(score));
+    draw_set_color(c_white);
+
 }
 
 if(draw_lives)
@@ -52,9 +56,19 @@ if(draw_dashbar)
         0, hud_color, hud_alpha
     );
     
+    var x_full_shake = x_shake_fgr;
+    var y_full_shake = y_shake_fgr;
+
+    if (parent.dashing)
+    {
+        var w = wave(-1, 1, .1, 0, parent.tick);
+        x_full_shake += w;
+        // y_full_shake += w;
+    }
+    
     draw_sprite_ext( // drawing icon
         dashbar_sprite, HUD_DASHBAR_ICON,
-        dashbar_x + x_shake_fgr, dashbar_y + y_shake_fgr,
+        dashbar_x + x_full_shake, dashbar_y + y_full_shake,
         1, 1, 
         0, hud_color, hud_alpha + .2
     );
@@ -89,36 +103,50 @@ if(draw_f2chargebar)
         0, hud_color, hud_alpha
     );
     
+    var x_full_shake = x_shake_fgr;
+    var y_full_shake = y_shake_fgr;
+
+    if (!charge_ratio) // charge ratio will be zero when fully charged
+    {
+        var w = wave(0, 1, .1, 0, parent.tick);
+        x_full_shake += w;
+        // y_full_shake -= w;
+    }
+
     draw_sprite_part_ext( // drawing icon
         f2chargebar_icon_sprite, HUD_CHARGEBAR_ICON_FIRE2,
         0, 0,
         f2chargebar_width, f2chargebar_height * cooldown_rate,
-        f2chargebar_x + x_shake_fgr, f2chargebar_y + y_shake_fgr,
+        f2chargebar_x + x_full_shake, f2chargebar_y + y_full_shake,
         1, 1,
         hud_color, hud_alpha + .2
     );
 }
 
-/*
+
 if(draw_fire1hint)
 {
-    draw_rectangle(
-        hint_fire1_x - 13 - 1, hint_fire1_y - 13 - 1,
-        hint_fire1_x + 13 + 2, hint_fire1_y + 13 + 2, true
+    var cooldown_rate = ratio(
+        parent.fire1_cooldown, 0, parent.fire1_cooldown_rate * room_speed,
+        1, 0
     );
     
     draw_sprite_ext(
         icons_sprite, HUD_ICON_FIRE1_HINT,
         hint_fire1_x, hint_fire1_y,
         2, 2, 1,
-        hud_color, hud_alpha
+        hud_color, hud_alpha * cooldown_rate
+    );
+    
+    cooldown_rate = ratio(
+        parent.fire3_cooldown, 0, parent.fire3_cooldown_rate * room_speed,
+        1, 0
     );
     
     draw_sprite_ext(
-        controls_sprite, HUD_CONTROL_RB,
-        hint_fire1_x, hint_fire1_y - 32 - 8,
+        icons_sprite, HUD_ICON_FIRE3_HINT,
+        128 - 16, hint_fire1_y,
         2, 2, 1,
-        hud_color, hud_alpha
+        hud_color, hud_alpha * cooldown_rate
     );
 }
-*/

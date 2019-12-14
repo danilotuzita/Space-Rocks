@@ -3,8 +3,8 @@ parent = -1;
 hud_color = make_color_rgb(200, 255, 200);
 hud_alpha = .5;
 screen_center = room_width / 2;
-hud_mvt_shake_bkg = 1;
-hud_mvt_shake_fgr = 0;
+hud_mvt_shake_bkg = 2;
+hud_mvt_shake_fgr = 1;
 
 hud_style = 
 HUD_STYLE_BLOCK;

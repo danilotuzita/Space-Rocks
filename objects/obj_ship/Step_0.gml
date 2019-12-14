@@ -16,7 +16,7 @@
 	if (keyboard_check_pressed(ord("S"))) lives--;
 	
 	#region dash
-	if (controller.dash && dash_fuel > 0)
+	if ((controller.dash && dashing) || (dash_fuel > 0 && controller.dash_pressed))
 	{
 		dashing = true;
 		dash_fuel -= dash_consumption_rate;
@@ -35,7 +35,7 @@
 	} 
 	if (controller.dash_released || dash_fuel <= 0)
 	{
-		dash_fuel -= .2 * dashing;
+		dash_fuel -= .1 * dashing;
 		dashing = false;
 		move_speed = base_move_speed;
 	}

@@ -11,5 +11,3 @@ fire3_cooldown--;
 
 // increases the tick count
 tick++;
-
-	
