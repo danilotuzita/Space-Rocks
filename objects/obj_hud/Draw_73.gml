@@ -45,5 +45,5 @@ switch(room)
 
 
 if(DEBUG)
-    draw_text(0, room_height - 10, string(d));
+    draw_text(50, 50, string(d));
 

@@ -123,7 +123,6 @@ if(draw_f2chargebar)
     );
 }
 
-
 if(draw_fire1hint)
 {
     var cooldown_rate = ratio(

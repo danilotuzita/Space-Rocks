@@ -41,7 +41,7 @@ dashing = false;             // stores if the player is dashing state
 dash_speed_multiplier = 1.5; // speed multiplier while dashing
 
 dash_fuel = 1; // amont of dash fuel
-dash_consumption_rate = 1 / room_speed; // fuel consumption rate while dashing
+dash_consumption_rate = 0 / room_speed; // fuel consumption rate while dashing
 dash_recharge_rate = .1 / room_speed; // fuel recharge rate
 
 dash_trail_amount = 6;   // amount of saved trails
@@ -63,3 +63,7 @@ move_trail_rate = 2;   // spawn a trail tick interval
 move_trail_amount = 2; // amount of trails to spawn
 
 dead_blink_rate = 5; // blinking tick interval
+
+// rumble
+fire2_rumble_qindex = -1;
+dashing_rumble_qindex = -1;

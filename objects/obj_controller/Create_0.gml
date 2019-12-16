@@ -21,6 +21,9 @@ leftIntensity = 0;
 rightAngle = 0;
 rightIntensity = 0;
 
-
+// Sticks
 leftDeadZone = .5;
 rightDeadZone = .5;
+
+// Rumble
+rumble_handler = instance_create_layer(0, 0, "Instances", obj_rumble_handler); rumble_handler.parent = self;
