@@ -1,5 +1,6 @@
-global.player = self;
+global.game.player = self;
 last_asteroid = 9999;
+
 // init
 starting_x = room_width / 2;
 starting_y = room_height / 2;
@@ -67,3 +68,7 @@ dead_blink_rate = 5; // blinking tick interval
 // rumble
 fire2_rumble_qindex = -1;
 dashing_rumble_qindex = -1;
+low_life_alert_rumble1 = -1;
+low_life_alert_rumble2 = -1;
+
+repeat(lives) event_user(SHIP.EVENT_INCREASE_LIVES);

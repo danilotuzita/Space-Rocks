@@ -12,8 +12,8 @@
 	if (controller.rightIntensity > controller.rightDeadZone) image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
 	//#endregion
 
-	if (keyboard_check_pressed(ord("A"))) set_rumble(.2, 0, 3, 0, 0);//lives++;
-	if (keyboard_check_pressed(ord("S"))) set_rumble(0, .2, 3, 0, 0);//lives--;
+	if (keyboard_check_pressed(ord("A"))) event_user(SHIP.EVENT_DECREASE_LIVES); // set_rumble(.2, 0, 3, 0, 0);
+	if (keyboard_check_pressed(ord("S"))) event_user(SHIP.EVENT_INCREASE_LIVES);// set_rumble(0, .2, 3, 0, 0);
 	
 	if (keyboard_check_pressed(ord("D"))) set_rumble_ext(1, .1, .8, 5, 1, 0, 5); // giant steps
 	if (keyboard_check_pressed(ord("W"))) // heart beat
@@ -60,15 +60,13 @@
 		fire3_cooldown = fire3_cooldown_rate * room_speed; // sets fire2 cooldown
 		var half = fire3_bullet_count / 2;
 		for(var i = -half; i < half; i++)
-			with(fire_bullet(x, y, image_angle + (i * fire3_spread), .5)) // creates the bullet
+			with(fire_bullet(x, y, image_angle + (i * fire3_spread), .5, self)) // creates the bullet
 				image_alpha = .75;
 
-
-		var lrumble = 0.05 *     fire3_side;
-		var rrumble = 0.05 * not fire3_side;
+		var lrumble = 0.05;
+		var rrumble = 0.05;
 		set_rumble    (lrumble, rrumble, .033, 2, .033); // fire3 rumble
 		set_rumble_ext(rrumble, lrumble, .033, 1,    0, .033, 1); // fire3 rumble with delay
-		fire3_side = not fire3_side;
 	}
 	//#endregion
 
@@ -77,7 +75,7 @@
 	if(controller.fire1 && fire1_cooldown <= 0 && !fire2_charge && fire3_cooldown <= 0)
 	{
 		fire1_cooldown = fire1_cooldown_rate * room_speed; // sets fire1 cooldown
-		with(fire_bullet(x, y, image_angle, 1)) // creates the bullet
+		with(fire_bullet(x, y, image_angle, 1, self)) // creates the bullet
 			image_xscale = 2;
 
 		set_rumble(0, .05, .1, 0, 0); // fire1 rumble
@@ -102,7 +100,7 @@
 		if(controller.fire2_released) // if fire2 is released
 		{
 			fire2_cooldown = fire2_cooldown_rate * room_speed; // sets fire2 cooldown
-			with(fire_bullet(x, y, image_angle, 1)) // creates the bullet
+			with(fire_bullet(x, y, image_angle, 1, self)) // creates the bullet
 			{
 				var charge = other.fire2_charge;
 
@@ -146,6 +144,11 @@
 		if(!(tick % dead_blink_rate)) // if mod(tick, dead_blink_rate)
 			image_alpha = not image_alpha; // flash sprite
 		is_dead--; // decreases dead timer
-		// set_rumble(.01, .1, .1, 0, 0); // death rumble
+		
+		if(lives == 1 && is_dead == 0)
+		{
+			low_life_alert_rumble1 = set_rumble_ext(0.05, 0, .2, 999, .5,  0, 1);
+			low_life_alert_rumble2 = set_rumble_ext(0.05, 0, .2, 999, .5, .3, 1);
+		}
 	}
 //#endregion

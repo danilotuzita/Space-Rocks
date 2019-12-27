@@ -20,14 +20,14 @@ switch(room)
         }
         break;
     case room_game:
-        var sa = global.player.last_asteroid;
+        var la = parent.last_asteroid;
         
-        if (instance_exists(sa))
+        if (instance_exists(la))
         {
-            var _x = sa.x;
-            var _y = sa.y;
-            var sizex = sa.sprite_width / aim_sprite_width;
-            var sizey = sa.sprite_height / aim_sprite_height;
+            var _x = la.x;
+            var _y = la.y;
+            var sizex = la.sprite_width / aim_sprite_width;
+            var sizey = la.sprite_height / aim_sprite_height;
             
             draw_sprite_ext(
                 aim_sprite, 0,
@@ -44,6 +44,6 @@ switch(room)
 }
 
 
-if(DEBUG)
+if(HUD_DEBUG)
     draw_text(50, 50, string(d));
 

@@ -9,7 +9,7 @@ hud_mvt_shake_fgr = 1;
 hud_style = 
 HUD_STYLE_BLOCK;
 //HUD_STYLE_CLASSIC;
-event_user(0); // load HUD style
+event_user(HUD.EVENT_LOAD_STYLE); // load HUD style
 
 // should draw
 draw_kin = false;

@@ -1,7 +1,7 @@
 if (last_collision == other && last_collision_timer > 0) // if it already collided with this asteroid
 	return; // do nothing
 
-global.player.last_asteroid = other;
+parent.last_asteroid = other;
 
 score += 10;
 life_time += room_speed; // increase its life time
@@ -16,7 +16,7 @@ last_collision = other;
 last_collision_timer = .3 * room_speed;
 
 if (bounce-- <= 0) // checks if needs to be destroyed decreases bounce count
-	event_user(0); // destroy
+	event_user(BULLET.EVENT_DESTROY); // destroy
 else
 {
 	direction = -direction;     // inverts direction

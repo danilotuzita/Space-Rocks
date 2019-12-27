@@ -1,4 +1,3 @@
-
 for(var j = 0; j < dash_trail_amount; j++) // for every trail sprite
 {
 	// draws the trail[j]

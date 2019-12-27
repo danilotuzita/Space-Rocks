@@ -298,7 +298,7 @@
             "Key": "5872a9e4-872c-3105-165e-201dc3c460ae",
             "Value": {
                 "id": "089d15f9-7d8e-e2fb-29aa-51a68ff3a30b",
-                "resourcePath": "scripts\/hud_macros\/hud_macros.yy",
+                "resourcePath": "scripts/hud_macros/hud_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -346,7 +346,7 @@
             "Key": "6b2d6c6b-1178-e2f4-de59-77eaa612e26f",
             "Value": {
                 "id": "3ca13a82-0c76-12a1-116d-5cff7231ba7c",
-                "resourcePath": "scripts\/fire_bullet\/fire_bullet.yy",
+                "resourcePath": "scripts/fire_bullet/fire_bullet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -460,6 +460,14 @@
                 "id": "4c17a804-b6fa-4713-98f8-83eed576b5a4",
                 "resourcePath": "objects\\obj_hud\\obj_hud.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
+            "Value": {
+                "id": "93a28d4f-71c5-c7c8-5788-04fbd99cefdb",
+                "resourcePath": "scripts/obj_macros/obj_macros.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -763,6 +771,7 @@
         "268075a6-3181-4828-85be-11f12b86be90",
         "ab27b6f9-e7da-4ac8-8b02-ce0864025db9",
         "5872a9e4-872c-3105-165e-201dc3c460ae",
+        "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
         "6fc63247-a2df-40a4-a659-f6f2dc35fe2a",
         "2a385f14-ad7a-8db3-ed75-c7bb896f2cd4",
         "df9ca660-8f40-43d4-8484-49d0474907a2",

@@ -8,3 +8,5 @@ rotation_speed = 0; // bullet speed rotation
 
 last_collision = 0;       // reference to the last object it collided with
 last_collision_timer = 0;
+
+parent = -1;
