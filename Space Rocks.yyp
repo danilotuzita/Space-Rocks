@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "177af0ef-4b8c-4b61-b450-065867682eed",
+            "Value": {
+                "id": "d67509c8-750b-4771-8ee6-34e0b4d2d813",
+                "resourcePath": "scripts\\create_hud_pause_menu\\create_hud_pause_menu.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "18e3538c-6543-3934-2eec-c1614301f439",
             "Value": {
                 "id": "156337a0-3ce5-66e2-31dd-2b5666fe0ac0",
@@ -231,10 +239,34 @@
             }
         },
         {
+            "Key": "35259f30-cdcb-4d19-8146-551894131b3e",
+            "Value": {
+                "id": "7775f2e0-6b68-4cd0-ba5b-16696f1dd0f1",
+                "resourcePath": "objects\\obj_hud_pause_menu\\obj_hud_pause_menu.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "36c8f624-8eef-4306-af0e-ec420429e3db",
             "Value": {
                 "id": "77ddf93e-9d22-4268-80ec-6aa51cb87d10",
                 "resourcePath": "views\\36c8f624-8eef-4306-af0e-ec420429e3db.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "36e6f0db-3e96-4b05-83b9-bd4614820cc6",
+            "Value": {
+                "id": "1f0be53b-507e-49bb-8548-268609a6acc6",
+                "resourcePath": "shaders\\shd_gaussian_horizontal\\shd_gaussian_horizontal.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "3ee31537-5f92-402e-a473-ecc3075e24e8",
+            "Value": {
+                "id": "4895d09a-ea8d-46b9-a70f-32c47166d0d2",
+                "resourcePath": "views\\3ee31537-5f92-402e-a473-ecc3075e24e8.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -287,6 +319,14 @@
             }
         },
         {
+            "Key": "52a061fc-0293-4ade-b903-aabbe39bcb86",
+            "Value": {
+                "id": "e9e3ff98-a22e-428b-9285-69122ef33ed1",
+                "resourcePath": "shaders\\shd_gaussian_vertical\\shd_gaussian_vertical.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "56a5279f-873b-4308-a4b4-7528f4788868",
             "Value": {
                 "id": "0010cc17-6fd1-48dc-9515-5b3b97ad82ca",
@@ -298,7 +338,7 @@
             "Key": "5872a9e4-872c-3105-165e-201dc3c460ae",
             "Value": {
                 "id": "089d15f9-7d8e-e2fb-29aa-51a68ff3a30b",
-                "resourcePath": "scripts/hud_macros/hud_macros.yy",
+                "resourcePath": "scripts\/hud_macros\/hud_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -346,7 +386,7 @@
             "Key": "6b2d6c6b-1178-e2f4-de59-77eaa612e26f",
             "Value": {
                 "id": "3ca13a82-0c76-12a1-116d-5cff7231ba7c",
-                "resourcePath": "scripts/fire_bullet/fire_bullet.yy",
+                "resourcePath": "scripts\/fire_bullet\/fire_bullet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -463,10 +503,18 @@
             }
         },
         {
+            "Key": "90860f36-1cb7-4cd3-9f97-c8885be6cb1a",
+            "Value": {
+                "id": "7564bcd2-f79d-4e05-a7cb-2cc72093d19f",
+                "resourcePath": "scripts\\pause_game\\pause_game.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
             "Value": {
                 "id": "93a28d4f-71c5-c7c8-5788-04fbd99cefdb",
-                "resourcePath": "scripts/obj_macros/obj_macros.yy",
+                "resourcePath": "scripts\/obj_macros\/obj_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -751,6 +799,14 @@
             }
         },
         {
+            "Key": "f91b1b6c-1429-48ea-b397-5888707b0539",
+            "Value": {
+                "id": "a10b7d9d-642f-4184-bf8f-46ad773bc591",
+                "resourcePath": "shaders\\sh_blur\\sh_blur.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "faca9b0c-e48f-45fa-b29d-af273aa46db8",
             "Value": {
                 "id": "3116bc12-299a-4645-83c1-d8db2f6d5fb9",
@@ -767,6 +823,7 @@
         "1c7ae4e2-6ca6-d4fa-5a61-2e5d1a223a99",
         "2fe7f38a-8e3a-438b-9bf4-6b6e9b826c13",
         "bb2f3d38-61fc-489e-8312-f20f02ec31a2",
+        "177af0ef-4b8c-4b61-b450-065867682eed",
         "6dbad795-864c-448b-a652-f25da578147d",
         "268075a6-3181-4828-85be-11f12b86be90",
         "ab27b6f9-e7da-4ac8-8b02-ce0864025db9",
@@ -776,7 +833,8 @@
         "2a385f14-ad7a-8db3-ed75-c7bb896f2cd4",
         "df9ca660-8f40-43d4-8484-49d0474907a2",
         "230c36bc-3d64-aed8-c8ae-2aff393af180",
-        "689dbeba-389e-50ef-ec2c-c59d36850393"
+        "689dbeba-389e-50ef-ec2c-c59d36850393",
+        "90860f36-1cb7-4cd3-9f97-c8885be6cb1a"
     ],
     "tutorial": ""
 }

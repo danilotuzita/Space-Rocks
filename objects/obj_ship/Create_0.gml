@@ -70,5 +70,3 @@ fire2_rumble_qindex = -1;
 dashing_rumble_qindex = -1;
 low_life_alert_rumble1 = -1;
 low_life_alert_rumble2 = -1;
-
-repeat(lives) event_user(SHIP.EVENT_INCREASE_LIVES);

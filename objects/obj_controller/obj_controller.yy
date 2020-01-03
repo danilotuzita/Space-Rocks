@@ -15,6 +15,16 @@
             "m_owner": "a1755d64-32b7-4d4a-a0c3-02a3dc994c78"
         },
         {
+            "id": "6a540f9b-7dfd-3b61-f84a-39c4d9c27b76",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 10,
+            "eventtype": 7,
+            "m_owner": "a1755d64-32b7-4d4a-a0c3-02a3dc994c78"
+        },
+        {
             "id": "ba999bb8-0427-467f-993d-f8dce7bf6946",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -22,6 +32,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 1,
             "eventtype": 3,
+            "m_owner": "a1755d64-32b7-4d4a-a0c3-02a3dc994c78"
+        },
+        {
+            "id": "92431efa-15b2-fcb9-d1cc-3fc0c41f7cff",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 75,
+            "eventtype": 8,
             "m_owner": "a1755d64-32b7-4d4a-a0c3-02a3dc994c78"
         }
     ],
@@ -264,6 +284,20 @@
             "resourceFilter": 1023,
             "value": "gp_shoulderlb",
             "varName": "inp_dash",
+            "varType": 4
+        },
+        {
+            "id": "74a58239-5073-4f4f-ad90-b6066b1c4c58",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "gp_select",
+            "varName": "inp_select",
             "varType": 4
         }
     ],

@@ -1,5 +1,6 @@
 /// @description Game Create
 global.game = self;
+global.paused = false;
 score = 0;
 lives = 3;
 

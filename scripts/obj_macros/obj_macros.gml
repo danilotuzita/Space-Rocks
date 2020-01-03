@@ -24,3 +24,14 @@ enum ASTEROID
     EVENT_DESTROY = 0,
     EVENT_AAA = 0
 }
+
+enum CONTROLLER
+{
+    EVENT_RESET_ALL = 0
+}
+
+enum ORES
+{
+    IRON = 0,
+    COPPER = 1
+}
