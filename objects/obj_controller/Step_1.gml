@@ -4,7 +4,9 @@ pause = gamepad_button_check_pressed(device, inp_pause);
 select = gamepad_button_check_pressed(device, inp_select);
 
 up = gamepad_button_check(device, inp_up);
+up_pressed = gamepad_button_check_pressed(device, inp_up);
 down = gamepad_button_check(device, inp_down);
+down_pressed = gamepad_button_check_pressed(device, inp_down);
 left = gamepad_button_check(device, inp_left);
 right = gamepad_button_check(device, inp_right);
 

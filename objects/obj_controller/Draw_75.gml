@@ -3,8 +3,10 @@
 // all platforms. Using it in any other event may not work as expected, and may
 // give different results across different targets and even devices.
 
-if (!global.paused && pause)
+if (!global.paused && pause && pause_timeout <= 0)
 {
     event_user(CONTROLLER.EVENT_RESET_ALL);
     pause_game();
 }
+
+pause_timeout--;

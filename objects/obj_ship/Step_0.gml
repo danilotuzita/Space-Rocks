@@ -87,16 +87,25 @@
 	if(controller.fire2 && fire2_cooldown <= 0)
 		fire2_charge += fire2_charge_rate; // charges fire2
 
-	// if the fire2 charge is greater than it can
-	if(fire2_charge > fire2_max_charge)
-	{
-		fire2_charge = fire2_max_charge; // limit it
-		if (fire2_rumble_qindex < 0)
-			fire2_rumble_qindex = set_ind_rumble(.1, 0); // fire2 charged rumble
-	}
-
 	if(fire2_charge > 0) // if is charging
 	{
+		// if the fire2 charge is greater than it can
+		var fire2_ratio = ratio(
+			fire2_charge, 0, fire2_max_charge,
+			0, 1
+		);
+		
+		if (fire2_rumble_qindex < 0)
+			fire2_rumble_qindex = set_ind_rumble(0, 0); // fire2 charged rumble
+		var rumble = power(fire2_ratio, 3) + .1;
+		update_rumble(fire2_rumble_qindex, 0,  rumble * .3);
+		
+		if(fire2_ratio == 1)
+		{
+			fire2_charge = fire2_max_charge; // limit it
+			update_rumble(fire2_rumble_qindex, .1, .2);
+		}
+		
 		if(controller.fire2_released) // if fire2 is released
 		{
 			fire2_cooldown = fire2_cooldown_rate * room_speed; // sets fire2 cooldown

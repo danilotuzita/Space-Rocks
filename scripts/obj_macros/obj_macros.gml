@@ -18,6 +18,15 @@ enum HUD
     EVENT_LOAD_STYLE = 0
 }
 
+enum HUD_PAUSE
+{
+    // events
+    EVENT_DESTROY = 0,
+    EVENT_ACCEPT = 1,
+    EVENT_CANCEL = 2,
+    EVENT_UNPAUSE = 3
+}
+
 enum ASTEROID
 {
     // events
@@ -27,6 +36,7 @@ enum ASTEROID
 
 enum CONTROLLER
 {
+    // events
     EVENT_RESET_ALL = 0
 }
 
@@ -35,3 +45,4 @@ enum ORES
     IRON = 0,
     COPPER = 1
 }
+

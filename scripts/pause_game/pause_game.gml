@@ -15,10 +15,7 @@ if (global.paused)
     screen_save(pause_sc_fullpath);
     instance_deactivate_all(true);
     create_hud_pause_menu(self, pause_sc_fullpath);
-    
+
     global.paused = true;
     
 }
-
-
-debug(global.paused)

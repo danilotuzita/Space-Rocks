@@ -1,6 +1,7 @@
 /// @description Reset all controller variables
-up = false;
-down = false;
+pause_timeout = 0;
+up = false; up_pressed = false;
+down = false; down_pressed = false;
 left = false;
 right = false;
 

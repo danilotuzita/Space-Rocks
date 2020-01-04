@@ -10,15 +10,15 @@ with(self.controller.rumble_handler)
 
     if(ind_rumble_queue[# 2, index]) // checking if indefinte queue is reserved on index
     {
-        ind_rumble_queue[# 0, i] = lintensity; // update left intensity
-        ind_rumble_queue[# 1, i] = rintensity; // update right intensity
+        ind_rumble_queue[# 0, index] = lintensity; // update left intensity
+        ind_rumble_queue[# 1, index] = rintensity; // update right intensity
         return index;
     }
 
     if(rumble_queue[# 2, index] > 0 || rumble_queue[# 3, index] > 0)  // checking if timed queue is reserved on index
     {
-        rumble_queue[# 0, i] = lintensity; // update left intensity
-        rumble_queue[# 1, i] = rintensity; // update right intensity
+        rumble_queue[# 0, index] = lintensity; // update left intensity
+        rumble_queue[# 1, index] = rintensity; // update right intensity
         return index;
     }
 
