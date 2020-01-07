@@ -1,2 +1,2 @@
-/// @description Start game
-room_goto(room_game);
+/// @description Switch rooms
+room_goto(next_room);

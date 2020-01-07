@@ -14,4 +14,4 @@ if(choose(0, 1) == 0)
 }
 spawn_life(xx, yy);
 
-alarm[2] = room_speed * power_up_spawn_rate;
+alarm[GAME.ALARM_POWERUP_SPAWN] = room_speed * power_up_spawn_rate;

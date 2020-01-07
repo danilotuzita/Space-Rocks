@@ -16,6 +16,7 @@ switch(room)
         draw_f2chargebar = true;
         
         draw_aim = true;
+        draw_quitting = true;
         break;
     case room_space:
         draw_dashbar = true;

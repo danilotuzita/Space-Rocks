@@ -5,6 +5,10 @@ switch(cursor_pos)
         event_user(HUD_PAUSE.EVENT_UNPAUSE);
         break;
     case 1: // case quit
+        //debug(parent);
+        //parent.draw_quitting = true;
+        parent.parent.quitting = not parent.parent.quitting;
+        event_user(HUD_PAUSE.EVENT_UNPAUSE);
         break;
     default:
         break;

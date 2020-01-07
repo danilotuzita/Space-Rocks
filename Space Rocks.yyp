@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "1905f18f-6975-913b-e7ce-79d1967bd53e",
+            "Value": {
+                "id": "5e796233-32cf-42a1-052d-d77001855249",
+                "resourcePath": "scripts\\radian\\radian.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "19b966bf-fac8-4faf-a9e8-fbcc4613b180",
             "Value": {
                 "id": "b806863b-6665-4848-8b05-9d62af31e950",
@@ -255,22 +263,6 @@
             }
         },
         {
-            "Key": "36e6f0db-3e96-4b05-83b9-bd4614820cc6",
-            "Value": {
-                "id": "1f0be53b-507e-49bb-8548-268609a6acc6",
-                "resourcePath": "shaders\\shd_gaussian_horizontal\\shd_gaussian_horizontal.yy",
-                "resourceType": "GMShader"
-            }
-        },
-        {
-            "Key": "3ee31537-5f92-402e-a473-ecc3075e24e8",
-            "Value": {
-                "id": "4895d09a-ea8d-46b9-a70f-32c47166d0d2",
-                "resourcePath": "views\\3ee31537-5f92-402e-a473-ecc3075e24e8.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "42ce3d9f-faaa-4bcc-b1b3-9cfc0d76d6ad",
             "Value": {
                 "id": "b300bfdf-c3d1-4292-8cc4-e08da006bb71",
@@ -316,14 +308,6 @@
                 "id": "23575903-f741-c328-f5b1-848e191fbd6c",
                 "resourcePath": "scripts\\spawn_debris\\spawn_debris.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "52a061fc-0293-4ade-b903-aabbe39bcb86",
-            "Value": {
-                "id": "e9e3ff98-a22e-428b-9285-69122ef33ed1",
-                "resourcePath": "shaders\\shd_gaussian_vertical\\shd_gaussian_vertical.yy",
-                "resourceType": "GMShader"
             }
         },
         {
@@ -815,14 +799,6 @@
             }
         },
         {
-            "Key": "f91b1b6c-1429-48ea-b397-5888707b0539",
-            "Value": {
-                "id": "a10b7d9d-642f-4184-bf8f-46ad773bc591",
-                "resourcePath": "shaders\\sh_blur\\sh_blur.yy",
-                "resourceType": "GMShader"
-            }
-        },
-        {
             "Key": "faca9b0c-e48f-45fa-b29d-af273aa46db8",
             "Value": {
                 "id": "3116bc12-299a-4645-83c1-d8db2f6d5fb9",
@@ -844,6 +820,7 @@
         "268075a6-3181-4828-85be-11f12b86be90",
         "ab27b6f9-e7da-4ac8-8b02-ce0864025db9",
         "84618477-1de5-947b-0551-9fe8db63f0b4",
+        "1905f18f-6975-913b-e7ce-79d1967bd53e",
         "5872a9e4-872c-3105-165e-201dc3c460ae",
         "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
         "6fc63247-a2df-40a4-a659-f6f2dc35fe2a",

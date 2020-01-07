@@ -14,4 +14,4 @@ if(choose(0, 1) == 0)
 }
 spawn_asteroid(xx, yy, -1, -1);
 
-alarm[1] = room_speed * asteroid_spawn_rate;
+alarm[GAME.ALARM_ASTEROID_SPAWN] = room_speed * asteroid_spawn_rate;

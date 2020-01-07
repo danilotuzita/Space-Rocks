@@ -3,7 +3,8 @@
 	//#region movement
 	_x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
 	_y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
-	move_towards_point(x + _x, y + _y, move_speed * (_x * _x || _y * _y)); // move towards the new position with move_speed
+	if(can_move)
+		move_towards_point(x + _x, y + _y, move_speed * (_x * _x || _y * _y)); // move towards the new position with move_speed
 	// (_x * _x || _y * _y): checks if _x^2 or _y^2 is true
 	// further note: for some reason in GM negative values are false, therefore the power
 	//#endregion
@@ -29,17 +30,6 @@
 		dash_fuel -= dash_consumption_rate;
 		move_speed = base_move_speed * dash_speed_multiplier;
 
-		if(tick % dash_trail_interval == 0) // save trail position
-		{
-			dash_trail_grid[# 0, dash_trail_index] = x;
-			dash_trail_grid[# 1, dash_trail_index] = y;
-			dash_trail_grid[# 2, dash_trail_index] = image_angle;
-			dash_trail_grid[# 3, dash_trail_index] = 1; // setting opacity 1, as time passes this will decrease effectively becoming a vacant index on the grid
-
-			dash_trail_index++; // increase trail index
-			dash_trail_index %= dash_trail_amount; // assert the dash_trail_index is between 0 and dash_trail_amount
-		}
-
 		if (dashing_rumble_qindex < 0)
 			dashing_rumble_qindex = set_ind_rumble(.05, .2); // dashing rumble
 	} 
@@ -47,9 +37,20 @@
 	{
 		if (dashing_rumble_qindex >= 0)
 			dashing_rumble_qindex = disable_rumble(dashing_rumble_qindex); // disabling rumble
-		dash_fuel -= .1 * dashing;
+		dash_fuel -= dash_afterconsumption * dashing;
 		dashing = false;
 		move_speed = base_move_speed;
+	}
+	
+	if(dashing && tick % dash_trail_interval == 0) // if is dashing save trail position
+	{
+		dash_trail_grid[# 0, dash_trail_index] = x;
+		dash_trail_grid[# 1, dash_trail_index] = y;
+		dash_trail_grid[# 2, dash_trail_index] = image_angle;
+		dash_trail_grid[# 3, dash_trail_index] = 1; // setting opacity 1, as time passes this will decrease effectively becoming a vacant index on the grid
+
+		dash_trail_index++; // increase trail index
+		dash_trail_index %= dash_trail_amount; // assert the dash_trail_index is between 0 and dash_trail_amount
 	}
 	#endregion
 

@@ -7,6 +7,8 @@ starting_y = room_height / 2;
 image_angle = 90;
 x = starting_x;
 y = starting_y;
+can_move = true;
+wrap_around = true;
 base_move_speed = 5;
 move_speed = base_move_speed;
 controller = create_controller(self);
@@ -18,6 +20,10 @@ tick = 0; // tick counter
 is_dead = 0;
 invincible = false;
 is_dead_delay = 2; // invincible after death time
+
+quitting = false; // is quitting mission
+quit_timeout = 3 * room_speed; // time it takes to quit
+quitting_timer = 0; // quitting timer
 
 // fire1
 fire1_cooldown = 0;        // fire1 cooldown timer
@@ -42,8 +48,9 @@ dashing = false;             // stores if the player is dashing state
 dash_speed_multiplier = 1.5; // speed multiplier while dashing
 
 dash_fuel = 1; // amont of dash fuel
-dash_consumption_rate = 0 / room_speed; // fuel consumption rate while dashing
+dash_consumption_rate = .5 / room_speed; // fuel consumption rate while dashing
 dash_recharge_rate = .1 / room_speed; // fuel recharge rate
+dash_afterconsumption = .1; // percentage of the fuel that will be "deduced" after stop dashing
 
 dash_trail_amount = 6;   // amount of saved trails
 dash_trail_interval = 2; // interval of ticks between trail sprite saves

@@ -43,7 +43,3 @@ switch(room)
         break;
 }
 
-
-if(HUD_DEBUG)
-    draw_text(50, 50, string(d));
-

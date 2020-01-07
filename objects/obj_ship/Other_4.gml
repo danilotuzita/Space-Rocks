@@ -1,0 +1,1 @@
+event_user(SHIP.EVENT_RESET);

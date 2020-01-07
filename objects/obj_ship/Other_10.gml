@@ -1,5 +1,10 @@
 /// @description Reset player
-is_dead = is_dead_delay * room_speed; // set as dead
+controller.active = true;
+
+// reseting speed
+move_speed = base_move_speed;
+wrap_around = true;
+can_move = true;
 
 // reseting cooldowns
 fire1_cooldown = 0;

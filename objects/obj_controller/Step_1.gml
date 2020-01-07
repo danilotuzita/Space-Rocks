@@ -1,3 +1,4 @@
+if (not active) return;
 accept = gamepad_button_check(device, inp_accept);
 cancel = gamepad_button_check(device, inp_cancel);
 pause = gamepad_button_check_pressed(device, inp_pause);

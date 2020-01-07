@@ -20,6 +20,8 @@ draw_fire3hint = false;
 draw_dashbar = false;
 draw_f2chargebar = false;
 
+draw_quitting = false;
+
 // -- AIM -- //
 aim_sprite_width = sprite_get_width(aim_sprite);
 aim_sprite_height = sprite_get_height(aim_sprite);

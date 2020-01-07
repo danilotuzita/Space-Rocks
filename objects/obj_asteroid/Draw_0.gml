@@ -1,4 +1,3 @@
-
 var spr = (asteroid_health / asteroid_max_health) * sprite_get_number(sprite_index);
 
 draw_sprite_ext(sprite_index, (spr * crack) - 1,

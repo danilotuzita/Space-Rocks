@@ -1,5 +1,13 @@
+if(quitting)
+{
+	if(quitting_timer++ > quit_timeout)
+		event_user(SHIP.EVENT_QUIT_MISSION);
+} else
+	quitting_timer = 0;
+
+
 // wrap movement
-move_wrap(true, true, sprite_width / 2);
+if(wrap_around) move_wrap(true, true, sprite_width / 2);
 
 // dashing cooldown
 if(not dashing) dash_fuel += dash_recharge_rate;

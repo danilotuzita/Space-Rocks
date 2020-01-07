@@ -3,8 +3,11 @@ switch(room)
 {
 	case room_start_menu:
 		// if the asteroid has been destroyed and the alarm has not been set
-		if(!instance_exists(start_asteroid) && alarm[3] <= 0)
-			alarm[3] = 3 * room_speed; // sets the start game alarm
+		if(!instance_exists(start_asteroid) && alarm[GAME.ALARM_SWITCH_ROOMS] <= 0)
+		{
+			next_room = room_game;
+			alarm[GAME.ALARM_SWITCH_ROOMS] = 3 * room_speed; // sets the start game alarm
+		}
 		break;
 	case room_game:
 		if(score >= 99991000) // win condition

@@ -1,9 +1,22 @@
+enum GAME
+{
+    // events
+    EVENT_QUIT_MISSION = 0,
+    
+    // alarms
+    ALARM_RESTART_GAME = 0,
+    ALARM_ASTEROID_SPAWN = 1,
+    ALARM_POWERUP_SPAWN = 2,
+    ALARM_SWITCH_ROOMS = 3
+}
+
 enum SHIP
 {
     // events
     EVENT_RESET = 0,
     EVENT_DECREASE_LIVES = 1,
-    EVENT_INCREASE_LIVES = 2
+    EVENT_INCREASE_LIVES = 2,
+    EVENT_QUIT_MISSION = 3
 }
 
 enum BULLET
