@@ -5,6 +5,7 @@
 * [Design Guidelines](#Design-Guidelines)
 * [Features](#Features)
 * [Future](#Future)
+* [Downloads](#Downloads)
 
 ## Design Guidelines
 - Balanced game with multiple playstyles
@@ -34,6 +35,9 @@ Splash your laser gun to fire a spray of less damaging lasers. Great for cleanin
 
 <img src="https://github.com/danilotuzita/Space-Rocks/blob/master/other_files/fire3.gif?raw=true" width="300" height="300"/>
 
+## Downloads
+### Demo (09/01/2020)
+[Download](https://github.com/danilotuzita/Space-Rocks/tree/master/other_files/deploys/Demo-20200109.zip)
 
 ## Future
 You can follow my progress and future plans on the project's [Kanban Board](https://github.com/danilotuzita/Space-Rocks/projects/1)
