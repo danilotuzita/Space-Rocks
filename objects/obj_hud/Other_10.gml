@@ -3,7 +3,6 @@ switch(hud_style)
 {
     case HUD_STYLE_BLOCK:
         aim_sprite = spr_aim_block;
-        
         icons_sprite = spr_icons_block;
         
         dashbar_sprite = spr_dashbar_block;
@@ -27,7 +26,6 @@ switch(hud_style)
     case HUD_STYLE_CLASSIC:
     default:
         aim_sprite = spr_aim;
-        
         icons_sprite = spr_icons;
         
         dashbar_sprite = spr_dashbar;

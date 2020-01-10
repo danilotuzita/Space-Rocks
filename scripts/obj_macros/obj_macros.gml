@@ -53,6 +53,12 @@ enum CONTROLLER
     EVENT_RESET_ALL = 0
 }
 
+enum RUMBLE_HANDLER
+{
+    // events
+    EVENT_INIT_QUEUE = 0
+}
+
 enum ORES
 {
     IRON = 0,

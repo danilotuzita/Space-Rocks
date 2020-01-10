@@ -1,4 +1,5 @@
 /// @description 
+if(!rumble) return;
 var li = 0, ri = 0;
 
 for(var i = 0; i < queue_size; i++) // looping indefinite rumble queue

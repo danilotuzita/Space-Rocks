@@ -1,3 +1,4 @@
+// shake on this tick
 var x_shake_bkg = parent._x * hud_mvt_shake_bkg;
 var y_shake_bkg = parent._y * hud_mvt_shake_bkg;
 var x_shake_fgr = parent._x * hud_mvt_shake_fgr;
@@ -5,6 +6,7 @@ var y_shake_fgr = parent._y * hud_mvt_shake_fgr;
 
 if(draw_kin)
 {
+    // TODO: variabilize positions
     draw_sprite_ext(icons_sprite, HUD_ICON_KIN, 20 + x_shake_bkg, 20 + y_shake_bkg, kin_scale, kin_scale, 0, hud_color, hud_alpha);
     
     draw_set_color(hud_color);
@@ -23,10 +25,10 @@ if(draw_lives)
     }
     
     var lives_alpha = hud_alpha;
-    if (lives == 1)
+    if (lives == 1) // if player has only one life left
         lives_alpha *= abs(sin((10 * parent.tick) / room_speed));
     
-    for(var i = -half; i < half; i++)
+    for(var i = -half; i < half; i++) // draws the lives icon centralized
         draw_sprite_ext(
             icons_sprite, HUD_ICON_LIVES,
             (screen_center + (icons_sprite_half_width * lives_scale)) +
@@ -66,7 +68,7 @@ if(draw_dashbar)
     if (parent.dashing)
     {
         var w = wave(-1, 1, .1, 0, parent.tick);
-        x_full_shake += w;
+        x_full_shake += w; // if its dashing shake it left and right more
         // y_full_shake += w;
     }
     
@@ -80,14 +82,10 @@ if(draw_dashbar)
 
 if(draw_f2chargebar)
 {
+    // FIRE2 BAR
     var charge_ratio = ratio(
         parent.fire2_charge, 0, parent.fire2_max_charge,
         f2chargebar_height, 0
-    );
-    
-    var cooldown_rate = ratio(
-        parent.fire2_cooldown, 0, parent.fire2_cooldown_rate * room_speed,
-        1, 0
     );
     
     // REF: https://forum.yoyogames.com/index.php?threads/solved-fill-up-effect-drawing.40400/
@@ -107,6 +105,12 @@ if(draw_f2chargebar)
         0, hud_color, hud_alpha
     );
     
+    
+    // FIRE2 ICON
+    var cooldown_rate = ratio(
+        parent.fire2_cooldown, 0, parent.fire2_cooldown_rate * room_speed,
+        1, 0
+    );
     var x_full_shake = x_shake_fgr;
     var y_full_shake = y_shake_fgr;
 
@@ -116,7 +120,7 @@ if(draw_f2chargebar)
         x_full_shake += w;
         // y_full_shake -= w;
     }
-
+    
     draw_sprite_part_ext( // drawing icon
         f2chargebar_icon_sprite, HUD_CHARGEBAR_ICON_FIRE2,
         0, 0,
@@ -136,7 +140,7 @@ if(draw_fire1hint)
     
     draw_sprite_ext(
         icons_sprite, HUD_ICON_FIRE1_HINT,
-        hint_fire1_x, hint_fire1_y,
+        hint_fire1_x + x_shake_bkg, hint_fire1_y + y_shake_bkg,
         2, 2, 1,
         hud_color, hud_alpha * cooldown_rate
     );
@@ -148,7 +152,7 @@ if(draw_fire1hint)
     
     draw_sprite_ext(
         icons_sprite, HUD_ICON_FIRE3_HINT,
-        128 - 16, hint_fire1_y,
+        128 - 16 + x_shake_bkg, hint_fire1_y + y_shake_bkg,
         2, 2, 1,
         hud_color, hud_alpha * cooldown_rate
     );
