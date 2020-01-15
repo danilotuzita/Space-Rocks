@@ -22,6 +22,8 @@ draw_f2chargebar = false;
 
 draw_quitting = false;
 
+draw_cursor = false;
+
 // -- AIM -- //
 aim_sprite_width = sprite_get_width(aim_sprite);
 aim_sprite_height = sprite_get_height(aim_sprite);

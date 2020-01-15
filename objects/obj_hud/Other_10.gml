@@ -1,4 +1,6 @@
 /// @description Load HUD Style
+window_set_cursor(cr_none);
+
 switch(hud_style)
 {
     case HUD_STYLE_BLOCK:
@@ -22,6 +24,8 @@ switch(hud_style)
         hint_fire1_x = room_width - 64 - 16 - 8;
         hint_fire1_y = room_height - 32;
         
+        aim_cursor_sprite = spr_mouse_cursor_block;
+        
         break;
     case HUD_STYLE_CLASSIC:
     default:
@@ -39,5 +43,7 @@ switch(hud_style)
         f2chargebar_height = sprite_get_height(f2chargebar_sprite);
         f2chargebar_x = room_width - f2chargebar_width - 16;
         f2chargebar_y = room_height - f2chargebar_height - 16;
+        
+        aim_cursor_sprite = spr_mouse_cursor;
         break;
 }

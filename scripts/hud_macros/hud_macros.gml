@@ -1,4 +1,4 @@
-#macro HUD_DEBUG false
+#macro HUD_DEBUG true
 
 // STYLE MACROS
 #macro HUD_STYLE_CLASSIC 1

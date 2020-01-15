@@ -172,5 +172,16 @@ if(draw_quitting && parent.quitting)
     );
 }
 
+if(draw_cursor)
+{
+    draw_sprite_ext(aim_cursor_sprite, -1,
+        mouse_x, mouse_y,
+        3, 3,
+        1, hud_color, hud_alpha - .2
+    );
+}
+
+d = "X: " + string(mouse_x) + " | Y: " + string(mouse_y);
+
 if(HUD_DEBUG)
     draw_text(50, 50, string(d));

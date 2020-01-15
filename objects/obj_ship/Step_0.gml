@@ -10,14 +10,17 @@
 	//#endregion
 
 	//#region rotation
-	if (controller.rightIntensity > controller.rightDeadZone) image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
+	if (not controller.controller_active)
+		image_angle = point_direction(x, y, mouse_x, mouse_y);
+	else
+		image_angle = controller.rightAngle * (controller.rightIntensity > controller.rightDeadZone); // if right axis is out of the dead zone, sets the new angle
 	//#endregion
 
-	if (keyboard_check_pressed(ord("A"))) event_user(SHIP.EVENT_DECREASE_LIVES); // set_rumble(.2, 0, 3, 0, 0);
-	if (keyboard_check_pressed(ord("S"))) event_user(SHIP.EVENT_INCREASE_LIVES);// set_rumble(0, .2, 3, 0, 0);
+	if (keyboard_check_pressed(ord("J"))) event_user(SHIP.EVENT_DECREASE_LIVES); // set_rumble(.2, 0, 3, 0, 0);
+	if (keyboard_check_pressed(ord("K"))) event_user(SHIP.EVENT_INCREASE_LIVES);// set_rumble(0, .2, 3, 0, 0);
 	
-	if (keyboard_check_pressed(ord("D"))) set_rumble_ext(1, .1, .8, 5, 1, 0, 5); // giant steps
-	if (keyboard_check_pressed(ord("W"))) // heart beat
+	if (keyboard_check_pressed(ord("L"))) set_rumble_ext(1, .1, .8, 5, 1, 0, 5); // giant steps
+	if (keyboard_check_pressed(ord("I"))) // heart beat
 	{
 		set_rumble_ext(1, 0, .2, 105, .5, 0, 1);
 		set_rumble_ext(1, 0, .2, 105, .5, .3, 1);
