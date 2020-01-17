@@ -11,7 +11,7 @@
 
 	//#region rotation
 	if (not controller.controller_active)
-		image_angle = point_direction(x, y, mouse_x, mouse_y);
+		image_angle = controller.cursor_relative_angle;//point_direction(x, y, mouse_x, mouse_y);
 	else
 		image_angle = controller.rightAngle * (controller.rightIntensity > controller.rightDeadZone); // if right axis is out of the dead zone, sets the new angle
 	//#endregion

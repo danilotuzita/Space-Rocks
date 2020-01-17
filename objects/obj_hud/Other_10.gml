@@ -1,6 +1,4 @@
 /// @description Load HUD Style
-window_set_cursor(cr_none);
-
 switch(hud_style)
 {
     case HUD_STYLE_BLOCK:

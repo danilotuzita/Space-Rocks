@@ -1,9 +1,8 @@
-/// @description Handle Keyboard/Mouse input
+/// @description Handle Keyboard input
 /*accept = gamepad_button_check(device, inp_accept);
 cancel = gamepad_button_check(device, inp_cancel);
 pause = gamepad_button_check_pressed(device, inp_pause);
 select = gamepad_button_check_pressed(device, inp_select);*/
-
 inp_kbd_up =    ord("W");
 inp_kbd_down =  ord("S");
 inp_kbd_left =  ord("A");
@@ -33,5 +32,3 @@ dash_pressed = keyboard_check_pressed(inp_kbd_dash);
 dash_released = keyboard_check_released(inp_kbd_dash);
 
 controller_active = false;
-last_mouse_x = mouse_x;
-last_mouse_y = mouse_y;

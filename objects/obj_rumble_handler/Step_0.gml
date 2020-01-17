@@ -1,5 +1,5 @@
 /// @description 
-if(!rumble) return;
+if(!rumble) return event_user(RUMBLE_HANDLER.EVENT_INIT_QUEUE);
 var li = 0, ri = 0;
 
 for(var i = 0; i < queue_size; i++) // looping indefinite rumble queue
