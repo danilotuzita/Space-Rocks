@@ -19,5 +19,5 @@ with(self.controller.rumble_handler)
         return -1;
     }
     
-    return -1; // could not find a queue to disable
+    return -1; // index; // could not find a queue to disable
 }

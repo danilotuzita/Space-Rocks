@@ -330,7 +330,7 @@
             "Key": "5872a9e4-872c-3105-165e-201dc3c460ae",
             "Value": {
                 "id": "089d15f9-7d8e-e2fb-29aa-51a68ff3a30b",
-                "resourcePath": "scripts\/hud_macros\/hud_macros.yy",
+                "resourcePath": "scripts/hud_macros/hud_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -378,7 +378,7 @@
             "Key": "6b2d6c6b-1178-e2f4-de59-77eaa612e26f",
             "Value": {
                 "id": "3ca13a82-0c76-12a1-116d-5cff7231ba7c",
-                "resourcePath": "scripts\/fire_bullet\/fire_bullet.yy",
+                "resourcePath": "scripts/fire_bullet/fire_bullet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -514,7 +514,7 @@
             "Key": "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
             "Value": {
                 "id": "93a28d4f-71c5-c7c8-5788-04fbd99cefdb",
-                "resourcePath": "scripts\/obj_macros\/obj_macros.yy",
+                "resourcePath": "scripts/obj_macros/obj_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -703,6 +703,14 @@
             }
         },
         {
+            "Key": "d0e0ce7d-17c3-440e-96cc-b0e009f6d717",
+            "Value": {
+                "id": "66267a9d-400b-4111-b152-b691be1eb5a0",
+                "resourcePath": "scripts/hex_to_color/hex_to_color.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d2e0c1c7-6790-4ee5-9775-b818e2e11fa5",
             "Value": {
                 "id": "bbfa89e4-dcf5-4ed6-9e35-17860819b059",
@@ -845,6 +853,7 @@
         "ab27b6f9-e7da-4ac8-8b02-ce0864025db9",
         "84618477-1de5-947b-0551-9fe8db63f0b4",
         "1905f18f-6975-913b-e7ce-79d1967bd53e",
+        "d0e0ce7d-17c3-440e-96cc-b0e009f6d717",
         "5872a9e4-872c-3105-165e-201dc3c460ae",
         "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
         "6fc63247-a2df-40a4-a659-f6f2dc35fe2a",

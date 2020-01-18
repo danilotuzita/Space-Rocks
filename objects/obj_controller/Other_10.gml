@@ -1,7 +1,4 @@
 /// @description Reset all controller variables
-window_mouse_set(room_center_x, room_center_y);
-cursor_x = room_center_x; // position of the fake cursor
-cursor_y = room_center_y; 
 mouse_delta_x = 0; // how much the cursor moved this tick
 mouse_delta_y = 0;
 mouse_moved = false; // was the mouse moved this tick?
@@ -17,6 +14,16 @@ accept = false;
 cancel = false;
 pause = false;
 select = false;
+
+fire1 = false;
+fire2 = false;
+fire2_pressed = false;
+fire2_released = false;
+fire3 = false;
+
+dash = false;
+dash_pressed = false;
+dash_released = false;
 
 // Rectangular coordinates
 leftX = 0;

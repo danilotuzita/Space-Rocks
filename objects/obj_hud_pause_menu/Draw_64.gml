@@ -1,9 +1,10 @@
-
+// drawing "shadowed" printscreen
+draw_sprite_ext(sprite_index, -1, 0, 0, 1, 1, 0, c_dkgray, 1);
 for (var i = 0; i < button_options; i++)
 {
     var c = i == cursor_pos ?
-            c_red :
-            c_white;
+            hud_acc_color :
+            hud_color;
     
     draw_rectangle_color(
         buttons[# i, 1],                buttons[# i, 2],
@@ -28,13 +29,13 @@ for (var i = 0; i < button_options; i++)
 );*/
 
 
-var spr = spr_ship;//parent.parent.sprite_index;
+var spr = spr_ship; //parent.parent.sprite_index;
 var spr_s = 2;
 var spr_w = ( sprite_get_width(spr) / 2) * spr_s;
 var spr_h = (sprite_get_height(spr) / 2) * spr_s;
 
-var icon_x = ( room_width / 2) + spr_w + 75;
-var icon_y = (room_height / 2) + spr_h;
+var icon_x = ( window_get_width() / 2) + spr_w + 75;
+var icon_y = (window_get_height() / 2) + spr_h;
 
 draw_sprite_ext(
     spr, 1,

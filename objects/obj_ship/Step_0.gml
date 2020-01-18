@@ -1,5 +1,5 @@
 //#region Player Input Handling
-	if (controller.select || keyboard_check(vk_escape)) game_end();
+	if (controller.select || keyboard_check(vk_f1)) game_end();
 	//#region movement
 	_x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
 	_y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
@@ -11,9 +11,9 @@
 
 	//#region rotation
 	if (not controller.controller_active)
-		image_angle = controller.cursor_relative_angle;//point_direction(x, y, mouse_x, mouse_y);
-	else
-		image_angle = controller.rightAngle * (controller.rightIntensity > controller.rightDeadZone); // if right axis is out of the dead zone, sets the new angle
+		image_angle = controller.cursor_relative_angle; //point_direction(x, y, mouse_x, mouse_y);
+	else if(controller.rightIntensity > controller.rightDeadZone)
+		image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
 	//#endregion
 
 	if (keyboard_check_pressed(ord("J"))) event_user(SHIP.EVENT_DECREASE_LIVES); // set_rumble(.2, 0, 3, 0, 0);

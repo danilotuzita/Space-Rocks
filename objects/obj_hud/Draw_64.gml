@@ -174,14 +174,14 @@ if(draw_quitting && parent.quitting)
 
 if(draw_cursor)
 {
-    draw_sprite_ext(aim_cursor_sprite, -1,
+    draw_sprite_ext(aim_cursor_sprite, HUD_CURSOR_AIM,
         controller.cursor_x, controller.cursor_y,
         3, 3,
         1, hud_color, hud_alpha - .2
     );
 }
 
-d = "X: " + string(controller.cursor_x) + " | Y: " + string(controller.cursor_y);
+// d = "X: " + string(controller.cursor_x) + " | Y: " + string(controller.cursor_y);
 
 if(HUD_DEBUG)
     draw_text(50, 50, string(d));

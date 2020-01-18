@@ -14,3 +14,4 @@ fire3_cooldown = 0;
 
 dash_cooldown = 0;
 dash_time = 0;
+dashing = false;

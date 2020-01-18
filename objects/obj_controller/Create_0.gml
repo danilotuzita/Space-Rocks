@@ -1,11 +1,15 @@
 parent = -1;
 hud = -1;
-is_paused = false;
 pause_timeout_delay = 1; //.3 * room_speed; // how many tick to be able to pause again
 dead_zone = .05;
 active = true;
-room_center_x = room_width / 2;
-room_center_y = room_height / 2;
+room_center_x = window_get_width() / 2;
+room_center_y = window_get_height() / 2;
+
+cursor_x = room_center_x; // position of the fake cursor
+cursor_y = room_center_y; 
+
+mouse_set_to_center = false;
 
 controller_active = true; // if the player is actively using the controller
 
