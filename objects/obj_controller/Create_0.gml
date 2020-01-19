@@ -1,3 +1,4 @@
+load_controls(self, "cfg/controls.ini");
 parent = -1;
 hud = -1;
 pause_timeout_delay = 1; //.3 * room_speed; // how many tick to be able to pause again
