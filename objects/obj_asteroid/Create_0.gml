@@ -1,10 +1,10 @@
-
+// initing default asteroid
+speed = random_range(0.5, 2);
 direction = irandom_range(0, 359);
 image_angle = irandom_range(0, 359);
-speed = random_range(0.5, 2);
-rotation_speed = random_range(1, 2);
-debris = 10;
-spawn_child = true;
-asteroid_health = 1;
-asteroid_max_health = 1;
-crack = true;
+rotation_speed = random_range(1, 2); // sprite rotation speed
+debris = 10; // number of debris it creates when destroyed
+spawn_child = true; // can spawn child?
+asteroid_health = 1; // asteroid health points
+asteroid_max_health = 1; // stating health points
+crack = true; // sprite "cracks"?

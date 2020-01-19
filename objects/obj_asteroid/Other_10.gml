@@ -1,6 +1,6 @@
 /// @description Destroy
 if (spawn_child)
-switch(sprite_index)
+switch(sprite_index) // spawning childs
 {
 	case spr_asteroid_huge:
 		repeat(2)
@@ -12,7 +12,7 @@ switch(sprite_index)
 		break;
 }
 
-repeat(debris)
+repeat(debris) // spawning debris
 	instance_create_layer(x, y, "Instances", obj_debris);
 
 instance_destroy();
