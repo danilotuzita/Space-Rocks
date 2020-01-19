@@ -41,6 +41,6 @@ draw_sprite_ext(
     spr, 1,
     icon_x - spr_w, icon_y - spr_h,
     spr_s, spr_s,
-    90, c_white,
+    90, hud_color,
     1
 );

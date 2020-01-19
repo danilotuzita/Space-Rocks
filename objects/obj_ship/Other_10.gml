@@ -12,6 +12,4 @@ fire2_cooldown = 0;
 fire2_charge = 0;
 fire3_cooldown = 0;
 
-dash_cooldown = 0;
-dash_time = 0;
 dashing = false;

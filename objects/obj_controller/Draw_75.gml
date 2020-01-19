@@ -4,9 +4,9 @@
 /// give different results across different targets and even devices.
 
 if (HUD_DEBUG && !controller_active)
-    draw_line(
+    draw_line_color(
         parent.x - camera_get_view_x(view_camera[0]), parent.y - camera_get_view_y(view_camera[0]),
-        cursor_x, cursor_y
+        cursor_x, cursor_y, c_dkgray, c_dkgray
     );
 
 if (!global.paused && pause && pause_timeout <= 0)
