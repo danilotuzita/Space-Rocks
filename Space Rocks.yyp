@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "10c1c285-0c75-b482-b604-d8e275afd610",
+            "Value": {
+                "id": "b48cd877-818d-2516-69f5-220af97520c8",
+                "resourcePath": "scripts\\wrap_in_vector\\wrap_in_vector.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "12ac26a0-160e-db50-ccb5-6031c8016509",
             "Value": {
                 "id": "407711e5-6335-cb38-bc89-1f732ff0d151",
@@ -886,6 +894,7 @@
         "84618477-1de5-947b-0551-9fe8db63f0b4",
         "1905f18f-6975-913b-e7ce-79d1967bd53e",
         "d0e0ce7d-17c3-440e-96cc-b0e009f6d717",
+        "10c1c285-0c75-b482-b604-d8e275afd610",
         "5872a9e4-872c-3105-165e-201dc3c460ae",
         "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
         "90860f36-1cb7-4cd3-9f97-c8885be6cb1a",

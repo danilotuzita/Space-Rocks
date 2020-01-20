@@ -10,6 +10,8 @@
 #macro HUD_ICON_LIVES 1
 #macro HUD_ICON_FIRE1_HINT 2
 #macro HUD_ICON_FIRE3_HINT 3
+#macro HUD_ICON_CONTINUE 4
+#macro HUD_ICON_QUIT 5
 
 // dashbar
 #macro HUD_DASHBAR_OUTLINE 0

@@ -1,4 +1,5 @@
 if(!rumble) return event_user(RUMBLE_HANDLER.EVENT_INIT_QUEUE);
+
 var li = 0, ri = 0;
 
 for(var i = 0; i < queue_size; i++) // looping indefinite rumble queue
@@ -32,6 +33,6 @@ for(var i = 0; i < queue_size; i++) // looping timed rumble queue
     ri += rumble_queue[# 1, i] / decay_ratio;
 }
 
-// parent.parent.hud.d = "li: " + string(li) + " | ri: " + string(ri);
+parent.parent.hud.d = "li: " + string(li) + "\nri: " + string(ri);
 
 gamepad_set_vibration(parent.device, li, ri);

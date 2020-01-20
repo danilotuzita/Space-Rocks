@@ -82,7 +82,7 @@
 		with(fire_bullet(x, y, image_angle, 1, self)) // creates the bullet
 			image_xscale = 2;
 
-		set_rumble(0, .05, .1, 0, 0); // fire1 rumble
+		set_rumble(0, .15, .1, 0, 0); // fire1 rumble
 	}
 	//#endregion
 
