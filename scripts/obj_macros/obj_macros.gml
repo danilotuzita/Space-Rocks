@@ -64,9 +64,14 @@ enum RUMBLE_HANDLER
     EVENT_INIT_QUEUE = 0
 }
 
-enum ORES
+enum INVENTORY
 {
-    IRON = 0,
-    COPPER = 1
+    // events
+    EVENT_CLEAR_INV = 0,
+    EVENT_ADD_ORES = 1,
+    EVENT_DEL_ORES = 2,
+    EVENT_UPDATE_WEIGHT = 3,
+    
+    // grid indexes
+    GRID_AMOUNT = 0
 }
-
