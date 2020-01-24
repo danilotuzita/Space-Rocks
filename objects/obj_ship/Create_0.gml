@@ -1,4 +1,4 @@
-global.game.player = self;
+global.player = self;
 last_asteroid = 9999;
 
 // init
@@ -13,6 +13,8 @@ base_move_speed = 5;
 move_speed = base_move_speed;
 controller = create_controller(self);
 hud = create_hud(self);
+inv = create_inventory(self, 5);
+searching_ore = ORES.IRON;
 
 // variables set up
 tick = 0; // tick counter

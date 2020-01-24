@@ -16,6 +16,9 @@
 		image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
 	//#endregion
 
+	if (keyboard_check_pressed(ord("1"))) give_to_inv(inv, 0, -1);
+	if (keyboard_check_pressed(ord("2"))) give_to_inv(inv, 1, -1);
+	
 	if (keyboard_check_pressed(ord("J"))) event_user(SHIP.EVENT_DECREASE_LIVES); // set_rumble(.2, 0, 3, 0, 0);
 	if (keyboard_check_pressed(ord("K"))) event_user(SHIP.EVENT_INCREASE_LIVES);// set_rumble(0, .2, 3, 0, 0);
 	

@@ -8,3 +8,5 @@ spawn_child = true; // can spawn child?
 asteroid_health = 1; // asteroid health points
 asteroid_max_health = 1; // stating health points
 crack = true; // sprite "cracks"?
+
+ore = irandom_range(0, ORES.COUNT - 1);

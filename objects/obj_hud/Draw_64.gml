@@ -6,11 +6,15 @@ var y_shake_fgr = parent._y * hud_mvt_shake_fgr;
 
 if(draw_kin)
 {
-    // TODO: variabilize positions
-    draw_sprite_ext(icons_sprite, HUD_ICON_KIN, 20 + x_shake_bkg, 20 + y_shake_bkg, kin_scale, kin_scale, 0, hud_color, hud_alpha);
+    draw_sprite_ext(
+        misc_sprite, HUD_MISC_KIN,
+        kin_x + x_shake_bkg, kin_y + y_shake_bkg,
+        kin_scale, kin_scale, 0,
+        hud_color, hud_alpha
+    );
     
     draw_set_color(hud_color);
-    draw_text(37 + x_shake_bkg, 14 + y_shake_bkg, string(score));
+    draw_text_transformed(50 + x_shake_bkg, 10 + y_shake_bkg, string(score), 2, 2, 0);
     draw_set_color(c_white);
 
 }
@@ -181,7 +185,25 @@ if(draw_cursor)
     );
 }
 
+if(draw_searching)
+{
+    draw_sprite_ext(
+        misc_sprite, HUD_MISC_SEARCH_BOX, 
+        search_box_x + x_shake_bkg, search_box_y + y_shake_bkg,
+        1, 1, 0,
+        hud_color, hud_alpha
+    );
+    if (between(parent.searching_ore, 0, ORES.COUNT - 1, true))
+        draw_sprite_ext(
+            ores_sprite, parent.searching_ore,
+            search_box_x + 16 + x_shake_fgr, search_box_y + 16 + y_shake_fgr,
+            2, 2, 0,
+            hud_color, hud_alpha
+        );
+}
+
 // d = "X: " + string(controller.cursor_x) + " | Y: " + string(controller.cursor_y);
 
-if(HUD_DEBUG)
+/*if(HUD_DEBUG)
     draw_text(50, 50, string(d));
+*/

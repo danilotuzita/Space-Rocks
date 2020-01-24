@@ -8,6 +8,7 @@ draw_f2chargebar = false;
 
 draw_aim = false;
 draw_quitting = false;
+draw_searching = false;
 
 switch(room)
 {
@@ -23,6 +24,7 @@ switch(room)
         
         draw_aim = true;
         draw_quitting = true;
+        draw_searching = true;
         break;
     case room_space:
         draw_kin = true;

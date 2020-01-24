@@ -19,7 +19,7 @@ switch(room)
 		}
 		
 		// setting alarms
-		alarm[GAME.ALARM_ASTEROID_SPAWN] = room_speed * asteroid_spawn_rate * (1 + difficulty_multiplier * score); // asteroid spawning alarm
+		alarm[GAME.ALARM_ASTEROID_SPAWN] = room_speed * asteroid_spawn_rate * (1 + (difficulty_multiplier * score)); // asteroid spawning alarm
 		alarm[GAME.ALARM_POWERUP_SPAWN]  = room_speed * power_up_spawn_rate; // power up spawning alarm
 		break;
 	case room_start_menu:
@@ -30,6 +30,7 @@ switch(room)
 			rotation_speed = .3;
 			spawn_child = false;
 			debris = 50;
+			ore = -1;
 		}
 		break;
 	case room_space:

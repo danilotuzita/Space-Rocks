@@ -68,9 +68,7 @@ enum INVENTORY
 {
     // events
     EVENT_CLEAR_INV = 0,
-    EVENT_ADD_ORES = 1,
-    EVENT_DEL_ORES = 2,
-    EVENT_UPDATE_WEIGHT = 3,
+    EVENT_UPDATE_WEIGHT = 1,
     
     // grid indexes
     GRID_AMOUNT = 0

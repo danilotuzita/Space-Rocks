@@ -4,6 +4,8 @@ global.paused = false;
 score = 0;
 lives = 3;
 
+init_ores();
+
 starting_asteroids = 3; // how many asteroids the game starts
 asteroid_spawn_rate = 6; // seconds between asteroid spawning
 power_up_spawn_rate = 30; // seconds between power up spawning
