@@ -198,7 +198,7 @@ if(draw_searching)
             ores_sprite, parent.searching_ore,
             search_box_x + 16 + x_shake_fgr, search_box_y + 16 + y_shake_fgr,
             2, 2, 0,
-            hud_color, hud_alpha
+            hud_color, hud_alpha - .2
         );
 }
 

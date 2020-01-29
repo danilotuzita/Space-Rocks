@@ -14,7 +14,7 @@ move_speed = base_move_speed;
 controller = create_controller(self);
 hud = create_hud(self);
 inv = create_inventory(self, 5);
-searching_ore = ORES.IRON;
+searching_ore = irandom_range(0, ORES.COUNT - 1);
 
 // variables set up
 tick = 0; // tick counter
