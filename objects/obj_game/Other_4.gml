@@ -31,6 +31,7 @@ switch(room)
 			spawn_child = false;
 			debris = 50;
 			ore = -1;
+			dramatic = true;
 		}
 		break;
 	case room_space:

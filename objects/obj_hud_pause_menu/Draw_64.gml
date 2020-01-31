@@ -1,5 +1,7 @@
 // drawing "shadowed" printscreen
 draw_sprite_ext(sprite_index, -1, 0, 0, 1, 1, 0, c_dkgray, 1);
+
+// for each button
 for (var i = 0; i < button_options; i++)
 {
     var c = buttons[# i, 0] == cursor_pos ? // if the cursor_pos is the button index
@@ -14,10 +16,10 @@ for (var i = 0; i < button_options; i++)
         );
     
     draw_sprite_ext(
-        hud.icons_sprite, buttons[#i, 3],
-        (buttons[# i, 1] + buttons[# i, 5] / 2),
-        (buttons[# i, 2] + buttons[# i, 6] / 2),
-         buttons[# i, 7] , buttons[# i, 7], 0,
+        hud.icons_sprite, buttons[# i, 3],
+       (buttons[# i, 1] + buttons[# i, 5] / 2),
+       (buttons[# i, 2] + buttons[# i, 6] / 2),
+        buttons[# i, 7],  buttons[# i, 7], 0,
         c, hud.hud_alpha
     );
 }

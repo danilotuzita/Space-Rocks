@@ -43,7 +43,7 @@ if (cursor_move_timeout-- < 0 || parent.up_pressed || parent.down_pressed)
         if (current_column == new_column) // if its the same column do nothing
             return;
         
-        for (var i = 0; i < button_options; i++) // looping through all the indexs
+        for (var i = 0; i < button_options; i++) // looping through all the indexes
         {
             var index = new_column * 10; // getting the real index
             if (between(button_indexes[i], index, index + 9, true)) // checking if the option is in the column

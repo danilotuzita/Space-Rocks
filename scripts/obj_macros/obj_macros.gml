@@ -46,7 +46,8 @@ enum ASTEROID
 {
     // events
     EVENT_DESTROY = 0,
-    EVENT_AAA = 0
+    // alarms
+    ALARM_DESTROY_DRAMATICALLY = 0
 }
 
 enum CONTROLLER

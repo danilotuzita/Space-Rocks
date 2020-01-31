@@ -10,3 +10,5 @@ asteroid_max_health = 1; // stating health points
 crack = true; // sprite "cracks"?
 
 ore = irandom_range(0, ORES.COUNT - 1);
+dramatic = false;
+dramatic_anim = false;
