@@ -11,7 +11,8 @@
         "2fe7f38a-8e3a-438b-9bf4-6b6e9b826c13",
         "bb2f3d38-61fc-489e-8312-f20f02ec31a2",
         "177af0ef-4b8c-4b61-b450-065867682eed",
-        "abcac02c-fc8b-0dc9-ec58-4e5fe5fddf13"
+        "abcac02c-fc8b-0dc9-ec58-4e5fe5fddf13",
+        "a2d1d550-2eb1-f0f9-d24a-cce8b3b2a51a"
     ],
     "filterType": "GMScript",
     "folderName": "Spawning",

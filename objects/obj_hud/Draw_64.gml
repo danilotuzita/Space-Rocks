@@ -181,7 +181,7 @@ if(draw_cursor)
     draw_sprite_ext(aim_cursor_sprite, HUD_CURSOR_AIM,
         controller.cursor_x, controller.cursor_y,
         3, 3,
-        1, hud_color, 1 // hud_alpha - .2
+        1, hud_color, hud_alpha
     );
 }
 

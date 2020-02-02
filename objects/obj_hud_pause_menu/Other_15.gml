@@ -10,7 +10,7 @@ if (!parent.controller_active)
         if (between(parent.cursor_x, buttons[# i, 1], buttons[# i, 1] + buttons[# i, 5], true) &&
             between(parent.cursor_y, buttons[# i, 2], buttons[# i, 2] + buttons[# i, 6], true))
         {
-            cursor_pos = i; // save this position
+            cursor_pos = buttons[# i, 0]; // save this position
             continue;
         }
 }

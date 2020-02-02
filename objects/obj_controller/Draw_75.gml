@@ -3,7 +3,7 @@
 /// all platforms. Using it in any other event may not work as expected, and may
 /// give different results across different targets and even devices.
 
-if (HUD_DEBUG && !controller_active)
+if (HUD_DEBUG && !controller_active && false)
     draw_line_color(
         parent.x - camera_get_view_x(view_camera[0]), parent.y - camera_get_view_y(view_camera[0]),
         cursor_x, cursor_y, c_dkgray, c_dkgray

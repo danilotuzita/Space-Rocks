@@ -13,7 +13,7 @@ switch(sprite_index) // spawning childs
 }
 
 repeat(debris) // spawning debris
-	instance_create_layer(x, y, "Instances", obj_debris);
+	create_debris(x, y, 1);
 
 give_to_inv(global.player.inv, ore, 1);
 
