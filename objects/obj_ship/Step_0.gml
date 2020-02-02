@@ -1,19 +1,19 @@
 //#region Player Input Handling
 	if (controller.select) game_end();
-	//#region movement
+	//#region movement and rotation
 	_x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
 	_y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis
 	if(can_move)
+	{
 		move_towards_point(x + _x, y + _y, move_speed * (_x * _x || _y * _y)); // move towards the new position with move_speed
-	// (_x * _x || _y * _y): checks if _x^2 or _y^2 is true
-	// further note: for some reason in GM negative values are false, therefore the power
-	//#endregion
-
-	//#region rotation
-	if (not controller.controller_active)
-		image_angle = controller.cursor_relative_angle; //point_direction(x, y, mouse_x, mouse_y);
-	else if(controller.rightIntensity > controller.rightDeadZone)
-		image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
+		// (_x * _x || _y * _y): checks if _x^2 or _y^2 is true
+		// further note: for some reason in GM negative values are false, therefore the power
+	
+		if (not controller.controller_active)
+			image_angle = controller.cursor_relative_angle; //point_direction(x, y, mouse_x, mouse_y);
+		else if(controller.rightIntensity > controller.rightDeadZone)
+			image_angle = controller.rightAngle; // if right axis is out of the dead zone, sets the new angle
+	}
 	//#endregion
 
 	if (keyboard_check_pressed(ord("1"))) give_to_inv(inv, 0, -1);
