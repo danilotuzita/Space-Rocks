@@ -49,7 +49,6 @@ icons_sprite_half_width = 8;
 icons_sprite_half_height = 8;
     // -- lives -- //
     lives_scale = 2;
-    lives_max_draw = 5;
     lives_icon_spread = 8 * lives_scale;
     lives_y = window_get_height() - sprite_get_width(icons_sprite) * lives_scale;
     // -- fire1 hint -- //

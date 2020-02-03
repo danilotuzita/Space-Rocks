@@ -22,9 +22,9 @@ if(draw_kin)
 if(draw_lives)
 {
     var half = lives / 2;
-    if(lives > lives_max_draw)
+    if(lives > parent.max_lives)
     {
-        half = lives_max_draw / 2;
+        half = parent.max_lives / 2;
         // TODO: come up with a way to indicate that the player has more lives than is shown
     }
     
