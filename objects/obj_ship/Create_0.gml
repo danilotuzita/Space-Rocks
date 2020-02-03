@@ -1,5 +1,4 @@
 global.player = self;
-last_asteroid = 9999;
 max_lives = 5;
 
 // init

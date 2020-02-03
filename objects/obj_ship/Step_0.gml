@@ -148,7 +148,7 @@
 		repeat(move_trail_amount) // spawn trails
 			with(spawn_debris(x, y))
 			{
-				speed = .1;
+				speed = .3;
 				image_xscale = 2;
 				image_yscale = 2;
 				fade_rate = .05;

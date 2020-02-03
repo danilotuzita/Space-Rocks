@@ -19,26 +19,33 @@ switch(room)
             );
         }
         break;
+
     case room_game:
-        var la = parent.last_asteroid;
-        
-        if (instance_exists(la))
+        if (draw_aim)
         {
-            var _x = la.x;
-            var _y = la.y;
-            var sizex = la.sprite_width / aim_sprite_width;
-            var sizey = la.sprite_height / aim_sprite_height;
-            
-            draw_sprite_ext(
-                aim_sprite, 0,
-                _x, _y,
-                sizex, sizey,
-                1, hud_color,
-                1
-            );
+            var iter = yld_find_ore(0, parent.searching_ore);
+            while(yld_find_ore(iter))
+            {
+                var ast = iter[0];
+                if (instance_exists(ast))
+                {
+                    var _x = ast.x;
+                    var _y = ast.y;
+                    var sizex = 1; //la.sprite_width / aim_sprite_width;
+                    var sizey = 1; //la.sprite_height / aim_sprite_height;
+                    
+                    draw_sprite_ext(
+                        aim_sprite, 0,
+                        _x, _y,
+                        sizex, sizey,
+                        1, hud_color,
+                        1
+                    );
+                }
+            }
         }
-        
         break;
+
     default:
         break;
 }

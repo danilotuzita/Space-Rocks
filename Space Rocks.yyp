@@ -202,7 +202,7 @@
             "Key": "1df4a1aa-aeee-a440-63ea-1e4ff24d405b",
             "Value": {
                 "id": "0a87c624-ee23-6e37-9a2b-dbb100288acf",
-                "resourcePath": "scripts/init_ores/init_ores.yy",
+                "resourcePath": "scripts\/init_ores\/init_ores.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "3f5b9f27-14dd-0df6-63bb-df9e695c9aef",
+            "Value": {
+                "id": "831b2133-ef39-01de-8f84-decb57def175",
+                "resourcePath": "scripts\/yld_find_ore\/yld_find_ore.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "42ce3d9f-faaa-4bcc-b1b3-9cfc0d76d6ad",
             "Value": {
                 "id": "b300bfdf-c3d1-4292-8cc4-e08da006bb71",
@@ -410,7 +418,7 @@
             "Key": "5872a9e4-872c-3105-165e-201dc3c460ae",
             "Value": {
                 "id": "089d15f9-7d8e-e2fb-29aa-51a68ff3a30b",
-                "resourcePath": "scripts/hud_macros/hud_macros.yy",
+                "resourcePath": "scripts\/hud_macros\/hud_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -482,7 +490,7 @@
             "Key": "6b2d6c6b-1178-e2f4-de59-77eaa612e26f",
             "Value": {
                 "id": "3ca13a82-0c76-12a1-116d-5cff7231ba7c",
-                "resourcePath": "scripts/fire_bullet/fire_bullet.yy",
+                "resourcePath": "scripts\/fire_bullet\/fire_bullet.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -618,7 +626,7 @@
             "Key": "919f58c6-fc06-74a2-8877-4ee1a7e5041a",
             "Value": {
                 "id": "93a28d4f-71c5-c7c8-5788-04fbd99cefdb",
-                "resourcePath": "scripts/obj_macros/obj_macros.yy",
+                "resourcePath": "scripts\/obj_macros\/obj_macros.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -650,7 +658,7 @@
             "Key": "980535e1-ea85-05cc-21d8-e0e8d1882eac",
             "Value": {
                 "id": "9c202aac-bc3c-75bb-8acc-b3ec98f13a1e",
-                "resourcePath": "scripts/give_to_inv/give_to_inv.yy",
+                "resourcePath": "scripts\/give_to_inv\/give_to_inv.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -762,7 +770,7 @@
             "Key": "b68ed69b-6cdd-9d18-c0fe-b3c415ccefe2",
             "Value": {
                 "id": "a9643c8a-fca2-cb3a-a2c7-f60e7fe326ab",
-                "resourcePath": "scripts/create_ores/create_ores.yy",
+                "resourcePath": "scripts\/create_ores\/create_ores.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -834,7 +842,7 @@
             "Key": "c7b1e4e1-3b77-d8ef-08ad-55c6684a14c6",
             "Value": {
                 "id": "94ccf33d-fad4-c88a-4f02-c4913f998bf2",
-                "resourcePath": "scripts/yld_explode_anim/yld_explode_anim.yy",
+                "resourcePath": "scripts\/yld_explode_anim\/yld_explode_anim.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -866,7 +874,7 @@
             "Key": "d0e0ce7d-17c3-440e-96cc-b0e009f6d717",
             "Value": {
                 "id": "66267a9d-400b-4111-b152-b691be1eb5a0",
-                "resourcePath": "scripts/hex_to_color/hex_to_color.yy",
+                "resourcePath": "scripts\/hex_to_color\/hex_to_color.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1050,7 +1058,8 @@
         "bf7cfd78-efc0-e9c6-1317-cd5a83f80e51",
         "580aaaea-1983-35ca-8939-ebff9ec7d03c",
         "67acc2d7-bb30-dc32-366f-a717ef4ee79e",
-        "c7b1e4e1-3b77-d8ef-08ad-55c6684a14c6"
+        "c7b1e4e1-3b77-d8ef-08ad-55c6684a14c6",
+        "3f5b9f27-14dd-0df6-63bb-df9e695c9aef"
     ],
     "tutorial": ""
 }
