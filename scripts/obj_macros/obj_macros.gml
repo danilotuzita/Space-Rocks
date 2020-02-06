@@ -38,7 +38,7 @@ enum HUD_PAUSE
     EVENT_ACCEPT = 1,
     EVENT_CANCEL = 2,
     EVENT_UNPAUSE = 3,
-    EVENT_SETUP = 4,
+    // EVENT_SETUP = 4,
     EVENT_HANDLE_INPUT = 5
 }
 

@@ -1,14 +1,14 @@
 /// @description Handle Input
-if (parent.accept) return event_user(HUD_PAUSE.EVENT_ACCEPT);
-if (parent.cancel) return event_user(HUD_PAUSE.EVENT_CANCEL);
+if (controller.accept) return event_user(HUD_PAUSE.EVENT_ACCEPT);
+if (controller.cancel) return event_user(HUD_PAUSE.EVENT_CANCEL);
 
-if (!parent.controller_active)
+if (!controller.controller_active)
 {
     if (mouse_check_button_pressed(mb_left)) return event_user(HUD_PAUSE.EVENT_ACCEPT);
     for (var i = 0; i < button_options; i++)
         // if the fake cursor is in the buttons bounds
-        if (between(parent.cursor_x, buttons[# i, 1], buttons[# i, 1] + buttons[# i, 5], true) &&
-            between(parent.cursor_y, buttons[# i, 2], buttons[# i, 2] + buttons[# i, 6], true))
+        if (between(controller.cursor_x, buttons[# i, 1], buttons[# i, 1] + buttons[# i, 5], true) &&
+            between(controller.cursor_y, buttons[# i, 2], buttons[# i, 2] + buttons[# i, 6], true))
         {
             cursor_pos = buttons[# i, 0]; // save this position
             continue;
@@ -16,12 +16,12 @@ if (!parent.controller_active)
 }
 
 // if pressed up or down, override timeout
-if (cursor_move_timeout-- < 0 || parent.up_pressed || parent.down_pressed)
+if (cursor_move_timeout-- < 0 || controller.up_pressed || controller.down_pressed)
 {
     var stickY = 0;
-    if (parent.leftY >  cursor_deadzone) stickY =  1;
-    if (parent.leftY < -cursor_deadzone) stickY = -1;
-    var _y = parent.down - parent.up + stickY;
+    if (controller.leftY >  cursor_deadzone) stickY =  1;
+    if (controller.leftY < -cursor_deadzone) stickY = -1;
+    var _y = controller.down - controller.up + stickY;
     
     if(_y != 0)
     {
@@ -31,9 +31,9 @@ if (cursor_move_timeout-- < 0 || parent.up_pressed || parent.down_pressed)
     }
     
     var stickX = 0;
-    if (parent.leftX >  cursor_deadzone) stickX =  1;
-    if (parent.leftX < -cursor_deadzone) stickX = -1;
-    var _x = parent.right - parent.left + stickX;
+    if (controller.leftX >  cursor_deadzone) stickX =  1;
+    if (controller.leftX < -cursor_deadzone) stickX = -1;
+    var _x = controller.right - controller.left + stickX;
     
     if(_x != 0)
     {

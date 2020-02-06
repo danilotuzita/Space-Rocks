@@ -3,10 +3,6 @@ var pause_sc_fullpath = working_directory + pause_sc_filename;
 
 if (global.paused)
 {
-
-    /*if file_exists(pause_sc_filename)
-        file_delete(pause_sc_filename);*/
-    
     instance_activate_all();
     global.paused = false;
 

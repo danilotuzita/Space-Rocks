@@ -1,3 +1,5 @@
+main_hud = global.player.hud;
+controller = -1;
 parent = -1;
 
 cursor_deadzone = .3;
@@ -16,5 +18,6 @@ menu_x += window_get_width() / 2;  menu_x -= menu_width / 2;  // x to the center
 menu_y += window_get_height() / 2; menu_y -= menu_height / 2; // y to the center and offsetting origin
 
 // BUTTON VARIABLES
-set_up = false;
-event_user(HUD_PAUSE.EVENT_SETUP);
+setup = false;
+setup_script = noone;
+cancel_script = noone;
