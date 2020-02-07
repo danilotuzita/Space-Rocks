@@ -1,6 +1,6 @@
 /// @description Handle Keyboard input
-accept = keyboard_check(inp_kbd_accept);
-cancel = keyboard_check(inp_kbd_cancel);
+accept = keyboard_check_pressed(inp_kbd_accept);
+cancel = keyboard_check_pressed(inp_kbd_cancel);
 pause  = keyboard_check_pressed(inp_kbd_pause);
 select = keyboard_check_pressed(inp_kbd_select);
 

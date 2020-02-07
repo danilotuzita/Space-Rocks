@@ -1,12 +1,12 @@
 /// @param vec
-/// @param vec_size
 /// @param value
 /// @param add
-var vec = argument0, vec_size = argument1, value = argument2, add = argument3;
+var vec = argument0, value = argument1, add = argument2;
 
 if (add > 0) add =  1;
 if (add < 0) add = -1;
 
+var vec_size = array_length_1d(vec);
 for (var i = 0; i < vec_size; i++)
 {
     if (value == vec[i]) // if found index

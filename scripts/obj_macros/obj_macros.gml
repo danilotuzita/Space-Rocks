@@ -31,7 +31,7 @@ enum HUD
     EVENT_LOAD_STYLE = 0
 }
 
-enum HUD_PAUSE
+enum HUD_MENU
 {
     // events
     EVENT_DESTROY = 0,
@@ -39,7 +39,10 @@ enum HUD_PAUSE
     EVENT_CANCEL = 2,
     EVENT_UNPAUSE = 3,
     // EVENT_SETUP = 4,
-    EVENT_HANDLE_INPUT = 5
+    EVENT_HANDLE_INPUT = 5,
+    
+    // alarms
+    ALARM_CUSTOM_YLD_ANIM = 0
 }
 
 enum ASTEROID

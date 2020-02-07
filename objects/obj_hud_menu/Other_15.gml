@@ -1,13 +1,14 @@
 /// @description Handle Input
-if (controller.accept) return event_user(HUD_PAUSE.EVENT_ACCEPT);
-if (controller.cancel) return event_user(HUD_PAUSE.EVENT_CANCEL);
+if (controller.accept) return event_user(HUD_MENU.EVENT_ACCEPT);
+if (controller.cancel || controller.pause) return event_user(HUD_MENU.EVENT_CANCEL);
 
 if (!controller.controller_active)
 {
-    if (mouse_check_button_pressed(mb_left)) return event_user(HUD_PAUSE.EVENT_ACCEPT);
+    if (mouse_check_button_pressed(mb_left)) return event_user(HUD_MENU.EVENT_ACCEPT);
     for (var i = 0; i < button_options; i++)
         // if the fake cursor is in the buttons bounds
-        if (between(controller.cursor_x, buttons[# i, 1], buttons[# i, 1] + buttons[# i, 5], true) &&
+        if (buttons[# i, 0] >= 0 && // only check when button is clickable/selectable
+            between(controller.cursor_x, buttons[# i, 1], buttons[# i, 1] + buttons[# i, 5], true) &&
             between(controller.cursor_y, buttons[# i, 2], buttons[# i, 2] + buttons[# i, 6], true))
         {
             cursor_pos = buttons[# i, 0]; // save this position
@@ -25,7 +26,7 @@ if (cursor_move_timeout-- < 0 || controller.up_pressed || controller.down_presse
     
     if(_y != 0)
     {
-        cursor_pos = wrap_in_vector(button_indexes, button_options, cursor_pos, _y);
+        cursor_pos = wrap_in_vector(button_indexes, cursor_pos, _y);
         cursor_move_timeout = cursor_move_timeout_delay;
         return;
     }
@@ -37,7 +38,6 @@ if (cursor_move_timeout-- < 0 || controller.up_pressed || controller.down_presse
     
     if(_x != 0)
     {
-        debug(_x);
         var current_column = abs(cursor_pos) / 10; // getting current column index
         var new_column = wrap(current_column, _x, 0, columns - 1); // getting new column index
         if (current_column == new_column) // if its the same column do nothing

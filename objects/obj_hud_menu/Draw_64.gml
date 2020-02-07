@@ -24,6 +24,8 @@ for (var i = 0; i < button_options; i++)
         buttons[# i, 7],   buttons[# i, 7],       // scale
         buttons[# i, 9], c, main_hud.hud_alpha    // rotation, color, alpha
     );
+    
+    script_execute(buttons[# i, 12]); // custom draw script
 }
 
 if(HUD_DEBUG && false)
