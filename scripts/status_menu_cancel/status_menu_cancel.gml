@@ -1,2 +1,2 @@
 instance_activate_object(parent);
-instance_destroy();
+event_user(HUD_MENU.EVENT_DESTROY);

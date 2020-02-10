@@ -1,3 +1,14 @@
+// HUD MENU SETUP VARIABLES
+menu_width  = 250;
+menu_height = 100;
+
+// menu pos as distance from the center
+menu_x = 0;
+menu_y = 0;
+
+menu_x += window_get_width() / 2;  menu_x -= menu_width / 2;  // x to the center and offsetting origin
+menu_y += window_get_height() / 2; menu_y -= menu_height / 2; // y to the center and offsetting origin
+
 button_options = 3;
 columns = 2;
 options_in_column[0] = 2;

@@ -6,6 +6,9 @@ draw_sprite_ext(sprite_index, -1, 0, 0, 1, 1, 0, c_dkgray, 1);
 // for each button
 for (var i = 0; i < button_options; i++)
 {
+    if (script_execute(buttons[# i, 12], i))
+        continue; // custom draw script returned successfully skip default drawing
+    
     var c = buttons[# i,  0] == cursor_pos ? // if the cursor_pos is the button index
             buttons[# i, 11] : // button acc color
             main_hud.hud_color;
@@ -24,8 +27,6 @@ for (var i = 0; i < button_options; i++)
         buttons[# i, 7],   buttons[# i, 7],       // scale
         buttons[# i, 9], c, main_hud.hud_alpha    // rotation, color, alpha
     );
-    
-    script_execute(buttons[# i, 12]); // custom draw script
 }
 
 if(HUD_DEBUG && false)

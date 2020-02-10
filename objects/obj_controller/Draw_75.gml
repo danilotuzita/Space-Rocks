@@ -9,10 +9,12 @@ if (HUD_DEBUG && !controller_active && false)
         cursor_x, cursor_y, c_dkgray, c_dkgray
     );
 
-if (!global.paused && pause && pause_timeout <= 0)
+if (!global.paused && (pause || !window_has_focus())) // if pressed pause
 {
+    window_mouse_set(cursor_x, cursor_y); // updating OS cursor to fake cursor pos (when paused the cursor is unlocked)
     event_user(CONTROLLER.EVENT_RESET_ALL);
     pause_game();
 }
 
-pause_timeout--;
+if (unpause-- == 1)
+    unpause = !unpause_game(); // not (the function returns true when unpaused successfully)

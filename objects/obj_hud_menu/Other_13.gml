@@ -1,4 +1,3 @@
 /// @description Unpause
-controller.pause_timeout = controller.pause_timeout_delay; // setting unpause delay
-pause_game(); // unpause game
+controller.unpause = 2;
 event_user(HUD_MENU.EVENT_DESTROY);

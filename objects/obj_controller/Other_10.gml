@@ -4,7 +4,6 @@ mouse_delta_y = 0;
 mouse_moved = false; // was the mouse moved this tick?
 cursor_relative_angle = 90; // angle of the cursor relative to the ship position
 
-pause_timeout = 0;
 up   = false; up_pressed   = false;
 down = false; down_pressed = false;
 left  = false;
