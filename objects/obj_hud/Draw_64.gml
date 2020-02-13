@@ -126,7 +126,7 @@ if(draw_f2chargebar)
     }
     
     draw_sprite_part_ext( // drawing icon
-        f2chargebar_icon_sprite, HUD_CHARGEBAR_ICON_FIRE2,
+        f2chargebar_sprite, HUD_CHARGEBAR_ICON_FIRE2,
         0, 0,
         f2chargebar_width, f2chargebar_height * cooldown_rate,
         f2chargebar_x + x_full_shake, f2chargebar_y + y_full_shake,

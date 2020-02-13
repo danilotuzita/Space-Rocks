@@ -2,9 +2,11 @@
 var i = argument0;
 
 var dir = 0;
+var spd = 6;
 switch(buttons[# i, 0])
 {
     case -1:
+        spd = 3;
         dir = 3;
         break;
     case 0:
@@ -41,6 +43,6 @@ draw_sprite_fill(
     progress, dir
 );
 
-buttons[# i, 13] += 3 / room_speed;
+buttons[# i, 13] += spd / room_speed;
 
 return true;

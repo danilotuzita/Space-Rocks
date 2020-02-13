@@ -10,7 +10,6 @@ switch(hud_style)
         // DASHBARS
         dashbar_sprite = spr_dashbar_block;
         f2chargebar_sprite = spr_chargebar_block;
-        f2chargebar_icon_sprite = spr_chargebar_icons_block;
         // MISC
         ores_sprite = spr_ores_block;
         misc_sprite = spr_misc_block;
@@ -28,7 +27,6 @@ switch(hud_style)
         // DASHBARS
         dashbar_sprite = spr_dashbar;
         f2chargebar_sprite = spr_chargebar;
-        f2chargebar_icon_sprite = spr_chargebar_icons;
         // MISC
         ores_sprite = spr_ores;
         misc_sprite = spr_misc;

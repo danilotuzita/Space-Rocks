@@ -23,7 +23,7 @@ switch (dir)
     case 0: // left to right
         var left = 0;
         var top = 0;
-        var width = spr_width * progress;
+        var width = round(spr_width * progress);
         var height = spr_height;
         var final_x = pos_x;
         var final_y = pos_y;
@@ -32,30 +32,31 @@ switch (dir)
         var left = 0;
         var top = ratio(progress, 0, 1, spr_height, 0);
         var width = spr_width;
-        var height = spr_height;
+        var height = spr_height - top;
         var final_x = pos_x;
-        var final_y = pos_y + top * 2;
+        var final_y = pos_y + (top * scale_y);
         break;
     case 2: // right to left
         var left = ratio(progress, 0, 1, spr_width, 0);
         var top = 0;
-        var width = spr_width;
+        var width = spr_width - left;
         var height = spr_height;
-        var final_x = pos_x + left * 2;
+        var final_x = pos_x + (left * scale_x);
         var final_y = pos_y;
         break;
-    case 3: // up to bottom
+    case 3: // top to bottom
         var left = 0;
         var top = 0;
         var width = spr_width;
-        var height = spr_height * progress;
+        var height = round(spr_height * progress);
         var final_x = pos_x;
         var final_y = pos_y;
         break;
+    // TODO: Case 4: center to outside
 }
 
 rot = rot mod 360; // normalizing to 360
-// offsetting depending on the rotation
+// offsetting depending on the rotation (for some reason draw_sprite_general rotates the sprite over it's pivot (top-left (not sprite origin)))
 final_x += spr_width * scale_x * between(rot, 180, 270, true); // offsetting right if rotation is on 2nd and 3rd quadrants
 final_y += spr_height * scale_y * between(rot, 90, 180, true); // offsetting  down if rotation is on 1st and 2nd quadrants
 
