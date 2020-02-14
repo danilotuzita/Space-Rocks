@@ -69,3 +69,5 @@ buttons[# i, 13] = custom_var; // custom var (var helper)
 
 if (clickable) // only add to clickable buttons when index is set
     button_indexes[clickable_buttons++] = buttons[# i, 0];
+
+return i; // returning i of button

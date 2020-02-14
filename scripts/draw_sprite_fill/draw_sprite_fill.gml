@@ -16,10 +16,10 @@ var spr_height = sprite_get_height(spr);
 
 progress = max(min(progress, 1), 0); // limiting progress to 0 and 1
 
-dir = wrap(dir, round(rot / 90), 0, 3); // fixing direction for "rotated" sprites
+if (between(dir, 0, 3, true))
+    dir = wrap(dir, round(rot / 90), 0, 3); // fixing direction for "rotated" sprites
 switch (dir)
 {
-    default:
     case 0: // left to right
         var left = 0;
         var top = 0;
@@ -52,7 +52,18 @@ switch (dir)
         var final_x = pos_x;
         var final_y = pos_y;
         break;
-    // TODO: Case 4: center to outside
+    case 4: // center to outside
+        debug("CASE 4");
+        var left   = round(ratio(progress, 0, 1, spr_width / 2, 0));
+        var top    = round(ratio(progress, 0, 1, spr_height / 2, 0));
+        var width  = round(ratio(progress, 0, 1, 0, spr_width));
+        var height = round(ratio(progress, 0, 1, 0, spr_height));
+        var final_x = pos_x + (left * scale_x);
+        var final_y = pos_y - (top * scale_y);
+        break;
+    default:
+        return;
+        break;
 }
 
 rot = rot mod 360; // normalizing to 360
