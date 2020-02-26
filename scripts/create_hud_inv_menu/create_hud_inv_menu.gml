@@ -8,7 +8,7 @@ with(hud)
 {
     parent = _parent;
     controller = _controller;
-    setup_script  = status_menu_setup;
+    setup_script  = inv_menu_setup;
     cancel_script = go_back_menu;
     sprite_index = spr;
     cursor_pos = _controller.controller_active ? 0 : -1; // if the controller is active sets the selected cursor as 0 (top option) else as -1 (unset)

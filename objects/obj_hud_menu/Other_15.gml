@@ -1,10 +1,11 @@
 /// @description Handle Input
-if (controller.accept) return event_user(HUD_MENU.EVENT_ACCEPT);
-if (controller.cancel || controller.pause) return event_user(HUD_MENU.EVENT_CANCEL);
+if (controller.accept || mouse_check_button_pressed(mb_left))
+    return event_user(HUD_MENU.EVENT_ACCEPT);
+if (controller.cancel || controller.pause)
+    return event_user(HUD_MENU.EVENT_CANCEL);
 
-if (!controller.controller_active)
+if (!controller.controller_active && controller.mouse_moved)
 {
-    if (mouse_check_button_pressed(mb_left)) return event_user(HUD_MENU.EVENT_ACCEPT);
     for (var i = 0; i < button_options; i++)
         // if the fake cursor is in the buttons bounds
         if (buttons[# i, 0] >= 0 && // only check when button is clickable/selectable
@@ -38,19 +39,34 @@ if (cursor_move_timeout-- < 0 || controller.up_pressed || controller.down_presse
     
     if(_x != 0)
     {
-        var current_column = abs(cursor_pos) / 10; // getting current column index
-        var new_column = wrap(current_column, _x, 0, columns - 1); // getting new column index
-        if (current_column == new_column) // if its the same column do nothing
-            return;
+        /// "range" (refered in the comments on this block of code) is the range reserved of possible button indexes for each column
+        /// meaning each column can only store max_buttons_in_column (10 for simplicity) buttons
+        /// Ex: button[# i, 0] = 12
+        ///     this button's index is 12; [2nd column, 3rd row]
+        ///     column := 12 / 10 = 1
+        ///     row    := 12 % 10 = 2
+        var current_column = round(cursor_pos / max_buttons_in_column); // getting current column
+        var new_column = wrap(current_column, _x, 0, columns - 1);      // getting new column
+        if (current_column == new_column) return;                       // if its the same column range do nothing
+
+        var current_row = cursor_pos mod max_buttons_in_column;    // getting button "position" in range
+        var new_column_range = new_column * max_buttons_in_column; // getting the new range's starting index
+        var index = new_column_range + current_row;                // getting possible real index (start looking if there's a button in the same row as the last selected button)
         
-        for (var i = 0; i < button_options; i++) // looping through all the indexes
+        repeat(max_buttons_in_column) // looping through all possible numbers in range
         {
-            var index = new_column * 10; // getting the real index
-            if (between(button_indexes[i], index, index + 9, true)) // checking if the option is in the column
-            {
-                cursor_pos = button_indexes[i]; // saving the button index
-                break; // quit for
-            }
+            var found = false;
+            for (var i = 0; i < clickable_buttons; i++) // for each clickable button
+                if (button_indexes[i] == index) // checking if the index exists
+                {
+                    cursor_pos = button_indexes[i]; // saving the button index
+                    found = true;
+                    break; // quit for
+                }
+            if (found) break; // quit repeat
+            
+            // getting next possible index (going back the indexes because there's a greater chance to exist a button in a lesser row)
+            index = wrap(index, -1, new_column_range, new_column_range + max_buttons_in_column - 1);
         }
         
         cursor_move_timeout = cursor_move_timeout_delay;

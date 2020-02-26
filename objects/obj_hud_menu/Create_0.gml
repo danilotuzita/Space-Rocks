@@ -1,6 +1,7 @@
 main_hud = global.player.hud;
 controller = -1;
 parent = -1;
+max_buttons_in_column = 10;
 
 // NOTE: cursor in this object means the selected button not the cursor arrow
 cursor_deadzone = .3;

@@ -38,6 +38,8 @@ cursor_relative_angle = point_direction(
     parent.x - camera_get_view_x(view_camera[0]), parent.y - camera_get_view_y(view_camera[0]), // ship's view relative position
     cursor_x, cursor_y
 );
-mouse_moved = mouse_delta_x != 0 || mouse_delta_y != 0;
+mouse_moved = cursor_x - cursor_x_last_pos != 0 || cursor_y - cursor_y_last_pos != 0;
+cursor_x_last_pos = cursor_x;
+cursor_y_last_pos = cursor_y;
 
 // hud.d = "sX: " + string(camera_get_view_x(view_camera[0])) + " | sY: " + string(camera_get_view_y(view_camera[0]));

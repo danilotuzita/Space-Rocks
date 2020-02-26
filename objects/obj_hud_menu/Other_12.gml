@@ -1,2 +1,2 @@
 /// @description Cancel
-script_execute(cancel_script);
+return script_execute(cancel_script, -99);

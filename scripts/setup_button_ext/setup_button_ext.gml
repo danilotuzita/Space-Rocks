@@ -52,7 +52,7 @@ var button_width_offset = (collumn_width - width * scale)  / 2; // button free s
 var button_height_space = menu_height / (auto_line_up ? options_in_column[column] : 1); // button height real state
 var button_height_offset = (button_height_space - height * scale) / 2; // button free space halfed
 
-buttons[# i,  0] = index + (column * 10); // index
+buttons[# i,  0] = index + (column * max_buttons_in_column); // index
 buttons[# i,  1] = round(menu_x + add_x + button_width_offset  + (collumn_width * column * auto_line_up)); // X
 buttons[# i,  2] = round(menu_y + add_y + button_height_offset + (button_height_space * index * auto_line_up)); // Y
 buttons[# i,  3] = icon_subimage; // icon subimage
