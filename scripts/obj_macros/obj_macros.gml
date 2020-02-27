@@ -28,7 +28,9 @@ enum BULLET
 enum HUD
 {
     // events
-    EVENT_LOAD_STYLE = 0
+    EVENT_LOAD_STYLE = 0,
+    EVENT_RELOAD_SHOULD_DRAW = 1,
+    EVENT_DISABLE_SHOULD_DRAW = 2
 }
 
 enum HUD_MENU
@@ -59,7 +61,10 @@ enum CONTROLLER
     EVENT_RESET_ALL = 0,
     EVENT_CHECK_CONTROLLER = 1,
     EVENT_CHECK_KEYBOARD = 2,
-    EVENT_CHECK_MOUSE = 3
+    EVENT_CHECK_MOUSE = 3,
+    
+    // alarms
+    ALARM_PAUSE = 0
 }
 
 enum RUMBLE_HANDLER

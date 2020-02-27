@@ -12,9 +12,10 @@ if (!controller.controller_active && controller.mouse_moved)
             between(controller.cursor_x, buttons[# i, 1], buttons[# i, 1] + buttons[# i, 5], true) &&
             between(controller.cursor_y, buttons[# i, 2], buttons[# i, 2] + buttons[# i, 6], true))
         {
+            selected_with_mouse = true;
             cursor_pos = buttons[# i, 0]; // save this position
-            continue;
-        }
+            break;
+        } else if (selected_with_mouse) cursor_pos = -1; // unbinding cursor
 }
 
 // if pressed up or down, override timeout
@@ -29,6 +30,7 @@ if (cursor_move_timeout-- < 0 || controller.up_pressed || controller.down_presse
     {
         cursor_pos = wrap_in_vector(button_indexes, cursor_pos, _y);
         cursor_move_timeout = cursor_move_timeout_delay;
+        selected_with_mouse = false;
         return;
     }
     
@@ -70,5 +72,7 @@ if (cursor_move_timeout-- < 0 || controller.up_pressed || controller.down_presse
         }
         
         cursor_move_timeout = cursor_move_timeout_delay;
+        selected_with_mouse = false;
     }
+
 }

@@ -12,17 +12,6 @@ hud_mvt_shake_fgr = 1; // secondary shake
 hud_style = 
 HUD_STYLE_BLOCK;
 //HUD_STYLE_CLASSIC;
+
 event_user(HUD.EVENT_LOAD_STYLE); // load HUD style
-
-draw_cursor = false; // does not depend on the other_room_start
-
-// should draw
-draw_kin = false;
-draw_lives = false;
-draw_fire1hint = false;
-draw_fire3hint = false;
-draw_dashbar = false;
-draw_f2chargebar = false;
-draw_aim = false;
-draw_quitting = false;
-draw_searching = false;
+event_user(HUD.EVENT_DISABLE_SHOULD_DRAW); // declaring should draw

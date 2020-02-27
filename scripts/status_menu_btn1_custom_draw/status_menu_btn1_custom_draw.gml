@@ -12,7 +12,10 @@ switch(buttons[# i, 0])
     case 0:
         dir = 1;
         break;
-    case 1:
+    case 10:
+        dir = 3;
+        break;
+    case 20:
         dir = 3;
         break;
 }

@@ -11,7 +11,7 @@
         "980535e1-ea85-05cc-21d8-e0e8d1882eac"
     ],
     "filterType": "GMScript",
-    "folderName": "items",
+    "folderName": "Items",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

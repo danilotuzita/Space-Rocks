@@ -8,6 +8,7 @@ cursor_deadzone = .3;
 cursor_move_timeout_delay = .2 * room_speed;
 cursor_move_timeout = 0;
 cursor_pos = -1; // set by the creation script
+selected_with_mouse = false; // flag if the current cursor was selected with the mouse, so if you accidentally touch your mouse it doesn't unselect the cursor
 
 // HUD MENU SETUP VARIABLES
 menu_width  = window_get_width();

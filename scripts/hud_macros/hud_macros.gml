@@ -13,6 +13,7 @@
 #macro HUD_ICON_CONTINUE 4
 #macro HUD_ICON_QUIT 5
 #macro HUD_ICON_SETTINGS 6
+#macro HUD_ICON_BACK 7
 
 // dashbar
 #macro HUD_DASHBAR_OUTLINE 0

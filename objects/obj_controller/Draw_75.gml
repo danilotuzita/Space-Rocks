@@ -11,10 +11,25 @@ if (HUD_DEBUG && !controller_active && false)
 
 if (!global.paused && (pause || !window_has_focus())) // if pressed pause
 {
-    window_mouse_set(cursor_x, cursor_y); // updating OS cursor to fake cursor pos (when paused the cursor is unlocked)
-    event_user(CONTROLLER.EVENT_RESET_ALL);
-    pause_game();
+    with(hud)
+    {
+        event_user(HUD.EVENT_DISABLE_SHOULD_DRAW);  // disabling the hud should draw
+        cursor_index = HUD_CURSOR_POINTER; // changing the mouse cursor to pointer
+    }
+    alarm[CONTROLLER.ALARM_PAUSE] = 2; // calling the pause alarm in 2 ticks (1 is not enough time to disable hud drawing before taking the pause screenshot)
 }
 
 if (unpause-- == 1)
+{
+    with(hud)
+    {
+        event_user(HUD.EVENT_RELOAD_SHOULD_DRAW); // reloading should draw
+        cursor_index = HUD_CURSOR_AIM; // changing the mouse cursor to aim
+    }
     unpause = !unpause_game(); // not (the function returns true when unpaused successfully)
+}
+
+
+    
+
+    

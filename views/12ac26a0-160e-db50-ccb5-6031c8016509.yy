@@ -14,7 +14,7 @@
         "a2d1d550-2eb1-f0f9-d24a-cce8b3b2a51a"
     ],
     "filterType": "GMScript",
-    "folderName": "Spawning",
+    "folderName": "spawning",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

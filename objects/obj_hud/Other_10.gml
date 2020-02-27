@@ -64,7 +64,6 @@ dashbar_y = window_get_height() - dashbar_height - 16;
     f2chargebar_x = window_get_width() - f2chargebar_width - 16;
     f2chargebar_y = window_get_height() - f2chargebar_height - 16;
 
-
 // -- MISC -- //
 misc_width = sprite_get_width(dashbar_sprite);
     // -- search -- //

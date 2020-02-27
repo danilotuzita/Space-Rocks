@@ -25,8 +25,8 @@ columns = 3;
 options_in_column[2] = 1; // updating options_in_column here so it doesn't fuck up the buttons that auto lines up
 var scale = 2;
 var box_size = 16;
-var settings_button = setup_button(0, 2, 0, 0, main_hud.icons_sprite, HUD_ICON_SETTINGS, true, box_size, box_size, scale, do_nothing, main_hud.hud_acc_color);
-buttons[# settings_button, 1] = box_size * scale / 2; // x
-buttons[# settings_button, 2] = window_get_height() - (box_size * scale * 1.5); // y
+var raw_x = box_size * scale / 2; // x
+var raw_y = window_get_height() - (box_size * scale * 1.5); // y
+var settings_button = setup_button_raw(0, 2, raw_x, raw_y, main_hud.icons_sprite, HUD_ICON_SETTINGS, true, box_size, box_size, scale, do_nothing, main_hud.hud_acc_color);
 
 setup = true;
