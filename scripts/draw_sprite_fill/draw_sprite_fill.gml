@@ -20,7 +20,7 @@ if (between(dir, 0, 3, true))
     dir = wrap(dir, round(rot / 90), 0, 3); // fixing direction for "rotated" sprites
 switch (dir)
 {
-    case 0: // left to right
+    case FILL_LEFT_RIGHT: // left to right
         var left = 0;
         var top = 0;
         var width = round(spr_width * progress);
@@ -28,7 +28,7 @@ switch (dir)
         var final_x = pos_x;
         var final_y = pos_y;
         break;
-    case 1: // bottom to up
+    case FILL_BOTTOM_UP: // bottom to up
         var left = 0;
         var top = ratio(progress, 0, 1, spr_height, 0);
         var width = spr_width;
@@ -36,7 +36,7 @@ switch (dir)
         var final_x = pos_x;
         var final_y = pos_y + (top * scale_y);
         break;
-    case 2: // right to left
+    case FILL_RIGHT_LEFT: // right to left
         var left = ratio(progress, 0, 1, spr_width, 0);
         var top = 0;
         var width = spr_width - left;
@@ -44,7 +44,7 @@ switch (dir)
         var final_x = pos_x + (left * scale_x);
         var final_y = pos_y;
         break;
-    case 3: // top to bottom
+    case FILL_UP_BOTTOM: // top to bottom
         var left = 0;
         var top = 0;
         var width = spr_width;
@@ -52,8 +52,7 @@ switch (dir)
         var final_x = pos_x;
         var final_y = pos_y;
         break;
-    case 4: // center to outside
-        debug("CASE 4");
+    case FILL_CENTER_OUT: // center to outside
         var left   = round(ratio(progress, 0, 1, spr_width / 2, 0));
         var top    = round(ratio(progress, 0, 1, spr_height / 2, 0));
         var width  = round(ratio(progress, 0, 1, 0, spr_width));

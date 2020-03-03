@@ -1,3 +1,7 @@
+// MATHMACROS
+#macro E 2.71828
+
+// ENUMS
 enum GAME
 {
     // events
@@ -82,3 +86,22 @@ enum INVENTORY
     // grid indexes
     GRID_AMOUNT = 0
 }
+
+
+enum DRAWER
+{
+    // events
+    EVENT_TOGGLE = 0,
+    EVENT_SET_HUD_SURFACE = 1
+    //EVENT_SET_GAME_SURFACE = 1,
+}
+
+// OTHER
+// fill functions
+#macro FILL_LEFT_RIGHT 0
+#macro FILL_BOTTOM_UP 1
+#macro FILL_RIGHT_LEFT 2
+#macro FILL_UP_BOTTOM 3
+#macro FILL_CENTER_OUT 4
+#macro FILL_MIDDLE_TOP_BOTTOM 5
+

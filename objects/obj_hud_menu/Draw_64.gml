@@ -29,7 +29,7 @@ for (var i = 0; i < button_options; i++)
     );
 }
 
-if(HUD_DEBUG && false)
+if(DEBUG && false)
     draw_rectangle(
         menu_x, menu_y,
         menu_x + menu_width, menu_y + menu_height, true

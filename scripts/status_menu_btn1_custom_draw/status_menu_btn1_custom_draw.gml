@@ -7,7 +7,7 @@ switch(buttons[# i, 0])
 {
     case -1:
         spd = 3;
-        dir = 3;
+        dir = 4;
         break;
     case 0:
         dir = 1;

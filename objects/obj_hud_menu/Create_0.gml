@@ -26,5 +26,5 @@ auto_line_up = true;
 // BUTTON VARIABLES
 setup = false;
 setup_button_count = 0;
-setup_script = noone;
-cancel_script = noone;
+setup_script = do_nothing;
+cancel_script = do_nothing;

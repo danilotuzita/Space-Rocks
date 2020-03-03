@@ -3,7 +3,7 @@
 /// all platforms. Using it in any other event may not work as expected, and may
 /// give different results across different targets and even devices.
 
-if (HUD_DEBUG && !controller_active && false)
+if (DEBUG && !controller_active && false)
     draw_line_color(
         parent.x - camera_get_view_x(view_camera[0]), parent.y - camera_get_view_y(view_camera[0]),
         cursor_x, cursor_y, c_dkgray, c_dkgray
@@ -13,7 +13,7 @@ if (!global.paused && (pause || !window_has_focus())) // if pressed pause
 {
     with(hud)
     {
-        event_user(HUD.EVENT_DISABLE_SHOULD_DRAW);  // disabling the hud should draw
+        event_user(HUD.EVENT_DISABLE_SHOULD_DRAW); // disabling the hud should draw
         cursor_index = HUD_CURSOR_POINTER; // changing the mouse cursor to pointer
     }
     alarm[CONTROLLER.ALARM_PAUSE] = 2; // calling the pause alarm in 2 ticks (1 is not enough time to disable hud drawing before taking the pause screenshot)
