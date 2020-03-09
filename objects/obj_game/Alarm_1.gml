@@ -14,4 +14,6 @@ if(choose(0, 1) == 0)
 }
 spawn_asteroid(xx, yy, -1, -1);
 
-alarm[GAME.ALARM_ASTEROID_SPAWN] = room_speed * asteroid_spawn_rate;
+var asteroid_count = instance_number(obj_asteroid);
+
+alarm[GAME.ALARM_ASTEROID_SPAWN] =  room_speed * asteroid_spawn_rate * (asteroid_count / (difficulty + (score / 1000)));

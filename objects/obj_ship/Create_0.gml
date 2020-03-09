@@ -13,7 +13,7 @@ base_move_speed = 5;
 move_speed = base_move_speed;
 controller = create_controller(self);
 hud = create_hud(self);
-inv = create_inventory(self, 5);
+inv = create_inventory(self, 100);
 searching_ore = irandom_range(0, ORES.COUNT - 1);
 
 // variables set up
@@ -30,6 +30,7 @@ quitting_timer = 0; // quitting timer
 // fire1
 fire1_cooldown = 0;        // fire1 cooldown timer
 fire1_cooldown_rate = .20; // fire1 cooldown timer rate
+// fire1_cooldown_rate = .01; // GOD MODE
 
 // fire2
 fire2_charge = 0;                    // fire2 charge power
@@ -42,7 +43,9 @@ fire2_cooldown_rate = 1.5; // fire2 cooldown timer rate
 // fire3
 fire3_cooldown = 0;        // fire3 cooldown timer
 fire3_cooldown_rate = .50; // fire3 cooldown timer rate
+// fire3_cooldown_rate = .20; // GOD MODE
 fire3_bullet_count = 3;    // fire3 bullet amount
+// fire3_bullet_count = 7;    // GOD MODE
 fire3_spread = 7;          // fire3 bullet spread
 
 // dash
@@ -52,7 +55,7 @@ dash_speed_multiplier = 1.5; // speed multiplier while dashing
 dash_fuel = 1; // amont of dash fuel
 dash_consumption_rate = .5 / room_speed; // fuel consumption rate while dashing
 dash_recharge_rate = .1 / room_speed; // fuel recharge rate
-dash_afterconsumption = .1; // percentage of the fuel that will be "deduced" after stop dashing
+dash_after_consumption = .1; // percentage of the fuel that will be "deduced" after stop dashing
 
 dash_trail_amount = 6;   // amount of saved trails
 dash_trail_interval = 2; // interval of ticks between trail sprite saves

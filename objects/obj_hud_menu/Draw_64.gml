@@ -14,10 +14,10 @@ for (var i = 0; i < button_options; i++)
             main_hud.hud_color;
     
     if(buttons[# i, 4]) // if has outline
-        draw_rectangle_color(
+        draw_rectangle_color_alpha(
             buttons[# i, 1],                   buttons[# i, 2], // x, y
             buttons[# i, 1] + buttons[# i, 5], buttons[# i, 2] + buttons[# i, 6], // x + width, y + height
-            c, c, c, c, true
+            c, c, c, c, true, main_hud.hud_alpha
         );
     
     draw_sprite_ext(

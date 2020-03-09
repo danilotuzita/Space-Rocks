@@ -52,7 +52,7 @@ switch(room)
                 _x, _y,
                 1, 1,
                 1, hud_color,
-                1
+                hud_alpha
             );
         }
         break;
@@ -76,7 +76,7 @@ switch(room)
                         _x, _y,
                         sizex, sizey,
                         1, hud_color,
-                        1
+                        hud_alpha
                     );
                 }
             }

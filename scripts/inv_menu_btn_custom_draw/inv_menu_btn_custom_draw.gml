@@ -12,10 +12,10 @@ var c = buttons[# i,  0] == cursor_pos ? // if the cursor_pos is the button inde
         main_hud.hud_color;
 
 if(buttons[# i, 4]) // if has outline
-    draw_rectangle_color(
+    draw_rectangle_color_alpha(
         _x, _y, // x, y
         _x + buttons[# i, 5], _y + buttons[# i, 6], // x + width, y + height
-        c, c, c, c, true
+        c, c, c, c, true, main_hud.hud_alpha
     );
 
 draw_sprite_ext(

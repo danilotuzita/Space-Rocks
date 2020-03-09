@@ -43,7 +43,7 @@
 	{
 		if (dashing_rumble_qindex >= 0)
 			dashing_rumble_qindex = disable_rumble(dashing_rumble_qindex); // disabling rumble
-		dash_fuel -= dash_afterconsumption * dashing;
+		dash_fuel -= dash_after_consumption * dashing;
 		dashing = false;
 		move_speed = base_move_speed;
 	}
