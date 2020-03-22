@@ -29,4 +29,7 @@ switch(room)
 		break;
 	case room_space:
 		break;
+	case room_test:
+		if(keyboard_check_pressed(ord("R")))
+			room_restart();
 }

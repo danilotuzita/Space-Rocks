@@ -1,5 +1,3 @@
-#macro DEBUG true
-
 // STYLE MACROS
 #macro HUD_STYLE_CLASSIC 1
 #macro HUD_STYLE_BLOCK 2

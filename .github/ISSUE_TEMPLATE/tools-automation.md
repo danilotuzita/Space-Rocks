@@ -8,7 +8,7 @@ assignees: danilotuzita
 
 ---
 
-Welcom to 怠け者Co, here we'll ease your life by making a robot to do your chores for you.
+Welcome to 怠け者Co, here we'll ease your life by making a robot to do your chores for you.
 
 **What do you need our robot to do? And at what frequency?**
 I need to do [...] repeatedly every time I [...]

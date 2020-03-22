@@ -1,3 +1,7 @@
+// "Compiling" macros
+#macro DEBUG true
+#macro GOD_MODE global.god_mode
+
 // MATHMACROS
 #macro E 2.71828
 

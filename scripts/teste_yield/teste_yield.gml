@@ -14,17 +14,15 @@ case 0/* [L1,c1] begin */:
     /// @param arr
     /// array_foreach(array)
     l_ctx[@3/* arr */] = l_args[0];
-    debug("start teste_yield");
     l_ctx[@4/* len */] = array_length_1d(l_ctx[3/* arr */]);
     l_ctx[@5/* i */] = 0;
-case 1/* [L9,c1] check for */:
+case 1/* [L7,c1] check for */:
     if (l_ctx[5/* i */] >= l_ctx[4/* len */]) { l_ctx[@1/* label */] = 4; continue; }
-    debug(("yield arr[" + l_ctx[5/* i */]) + "]");
     l_ctx[@0/* yield */] = array_wget(l_ctx[3/* arr */], l_ctx[5/* i */]); l_ctx[@1/* label */] = 2; return true;
-case 2/* [L11,c5] post yield, [L9,c1] post for */:
+case 2/* [L8,c5] post yield, [L7,c1] post for */:
     l_ctx[@5/* i */]++;
     l_ctx[@1/* label */] = 1; continue;
-default/* [L9,c1] end for, [L14,c1] end */: l_ctx[@0/* yield */] = 0; return false;
+default/* [L7,c1] end for, [L11,c1] end */: l_ctx[@0/* yield */] = 0; return false;
 }
 
 /*//!#gmcr
@@ -33,11 +31,8 @@ default/* [L9,c1] end for, [L14,c1] end */: l_ctx[@0/* yield */] = 0; return fal
 #gmcr
 var arr = argument0;
 
-debug("start teste_yield");
-
 var len = array_length_1d(arr);
 for (var i = 0; i < len; i++) {
-    debug("yield arr[" + i + "]");
     yield arr[i];
 }
 

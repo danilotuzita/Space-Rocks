@@ -1,4 +1,4 @@
-shader_enabled = !true; // Maintain this !
+shader_enabled = !true; // Maintain the !
 event_user(DRAWER.EVENT_TOGGLE); // Toggling shader
 game_surface = -999;
 hud_surface = -999;

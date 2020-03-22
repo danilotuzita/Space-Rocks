@@ -13,6 +13,3 @@ if (between(a, -5, 5, false))
     progress = sigma(a);
 else
     progress = (curr_tick >= room_speed) * mp;
-
-if (DEBUG)
-    debug(progress);

@@ -30,7 +30,7 @@ quitting_timer = 0; // quitting timer
 // fire1
 fire1_cooldown = 0;        // fire1 cooldown timer
 fire1_cooldown_rate = .20; // fire1 cooldown timer rate
-// fire1_cooldown_rate = .01; // GOD MODE
+if GOD_MODE fire1_cooldown_rate = .01; // GOD MODE
 
 // fire2
 fire2_charge = 0;                    // fire2 charge power
@@ -43,9 +43,9 @@ fire2_cooldown_rate = 1.5; // fire2 cooldown timer rate
 // fire3
 fire3_cooldown = 0;        // fire3 cooldown timer
 fire3_cooldown_rate = .50; // fire3 cooldown timer rate
-// fire3_cooldown_rate = .20; // GOD MODE
+if GOD_MODE fire3_cooldown_rate = .20; // GOD MODE
 fire3_bullet_count = 3;    // fire3 bullet amount
-// fire3_bullet_count = 7;    // GOD MODE
+if GOD_MODE fire3_bullet_count = 7;    // GOD MODE
 fire3_spread = 7;          // fire3 bullet spread
 
 // dash
