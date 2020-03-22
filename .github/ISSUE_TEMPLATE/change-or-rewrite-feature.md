@@ -2,7 +2,7 @@
 name: Change or Rewrite feature
 about: When something needs to be rewritten changed
 title: ''
-labels: enhancement, code cleanup/improvement
+labels: code cleanup/improvement, enhancement
 assignees: danilotuzita
 
 ---
