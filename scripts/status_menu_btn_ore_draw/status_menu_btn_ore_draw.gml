@@ -1,22 +1,8 @@
 /// @param i
 var i = argument0;
 
-var dir = 0;
 var spd = 6;
-switch(buttons[# i, 0])
-{
-    case -1: // ship sprite
-        spd = 3;
-        dir = 4;
-        break;
-    case 0: // ??
-        dir = 1;
-        break;
-    case 20: // back
-        dir = 3;
-        break;
-}
-
+var dir = 3;
 var spr = buttons[# i, 8];
 var sub_spr = buttons[# i, 3];
 var _x = buttons[# i, 1];
@@ -35,12 +21,21 @@ if(buttons[# i, 4]) // if has outline
         c, c, c, c, true, main_hud.hud_alpha
     );
 
+// drawing "frame"
 draw_sprite_fill(
     spr, sub_spr,
     _x, _y,
     scl, scl, rot,
     c, main_hud.hud_alpha,
     progress, dir
+);
+
+// drawing ore
+draw_sprite_fill(
+    main_hud.ores_sprite, global.player.searching_ore,
+    _x + (32+16) * scl, // don't even ask me why
+    _y,
+    scl, scl, rot, c, main_hud.hud_alpha, progress, dir
 );
 
 buttons[# i, 13] += spd / room_speed;

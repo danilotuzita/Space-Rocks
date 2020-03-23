@@ -1,9 +1,15 @@
 // "Compiling" macros
 #macro DEBUG true
+#macro DEBUGVAL_DEFAULT -9860456786320
 #macro GOD_MODE global.god_mode
+#macro SHADER_ACTIVE false;
 
 // MATHMACROS
 #macro E 2.71828
+
+// TEXT MACROS
+#macro DEFAULT_HALIGN fa_left
+#macro DEFAULT_VALIGN fa_top
 
 // ENUMS
 enum GAME

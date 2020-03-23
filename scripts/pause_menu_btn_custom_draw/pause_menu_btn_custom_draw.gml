@@ -1,22 +1,6 @@
 /// @param i
 var i = argument0;
 
-var dir = 0;
-var spd = 6;
-switch(buttons[# i, 0])
-{
-    case -1: // ship sprite
-        spd = 3;
-        dir = 4;
-        break;
-    case 0: // ??
-        dir = 1;
-        break;
-    case 20: // back
-        dir = 3;
-        break;
-}
-
 var spr = buttons[# i, 8];
 var sub_spr = buttons[# i, 3];
 var _x = buttons[# i, 1];
@@ -26,7 +10,8 @@ var rot = buttons[# i, 9];
 var c = buttons[# i,  0] == cursor_pos ? // if the cursor_pos is the button index
         buttons[# i, 11] : // button acc color
         main_hud.hud_color;
-var progress = buttons[# i, 13];
+var a = main_hud.hud_alpha;
+var text = buttons[# i, 13];
 
 if(buttons[# i, 4]) // if has outline
     draw_rectangle_color_alpha(
@@ -35,14 +20,16 @@ if(buttons[# i, 4]) // if has outline
         c, c, c, c, true, main_hud.hud_alpha
     );
 
-draw_sprite_fill(
+draw_sprite_ext(
     spr, sub_spr,
-    _x, _y,
-    scl, scl, rot,
-    c, main_hud.hud_alpha,
-    progress, dir
+    _x + 12, _y + 16,
+    scl, scl,
+    rot, c,
+    a
 );
 
-buttons[# i, 13] += spd / room_speed;
+var fnt_scl = scl + 1;
+// WIP
+draw_text_custom_align(_x + buttons[# i, 5], _y + 12, text, fnt_scl, c, a, fa_right, fa_center);
 
 return true;

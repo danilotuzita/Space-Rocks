@@ -28,13 +28,6 @@ if(draw_searching)
 if(draw_cursor)
     hud_draw_cursor();
 
-
-// d = "X: " + string(controller.cursor_x) + " | Y: " + string(controller.cursor_y);
-
-/*if(HUD_DEBUG)
-    draw_text(50, 50, string(d));
-*/
-
 switch(room)
 {
     case room_start_menu:

@@ -26,8 +26,14 @@ draw_sprite_ext(
     main_hud.hud_alpha
 );
 
-draw_set_color(c);
-draw_text_transformed(_x + (16 + 2) * scl, _y - 2 * scl, string(global.player.inv.items[# i, 0]), scl, scl, 0);
-draw_set_color(c_white);
+var fnt_scale = scl + 1;
+// var d = debug_control(0, .5);
+draw_text_custom_align(
+    _x + 18 * fnt_scale, _y - 3 * fnt_scale, // don't even
+    string(global.player.inv.items[# i, 0]),
+    fnt_scale, c,
+    main_hud.hud_alpha,
+    fa_center, DEFAULT_VALIGN
+);
 
 return true;

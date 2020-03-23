@@ -6,54 +6,46 @@ switch(room)
 	//#endregion
 	//#region Game
 	case room_game:	
-		// draw_text(20, 50, "LIVES: "+ string(lives));
-		// draw_text(20, 50, "NEXT ASTEROID: " + string(alarm[1]))
 		break;
 	//#endregion
 	//#region Win
 	case room_win:
 		// TODO: maybe there will be no winning, idk
-		var c = c_green;
-		draw_set_halign(fa_center);
-		
-		draw_text_transformed_color(
+		draw_text_custom_align(
 			room_width / 2, 200,
 			"YOU WIN!!!",
-			3, 3,
-			0,
-			c, c, c, c, 1
+			3, c_green, 1,
+			fa_center, DEFAULT_VALIGN
 		);
-		draw_text(
-			room_width / 2, 400,
-			">> PRESS ENTER TO RESTART <<"
+		draw_text_custom_align(
+			room_width / 2, 200,
+			">> PRESS ENTER TO RESTART <<",
+			1, c_white, 1,
+			fa_center, DEFAULT_VALIGN
 		);
-		
-		draw_set_halign(fa_left);
 		break;
 	//#endregion
 	//#region Lose
 	case room_lose:
 		// TODO: Player explodes, white out, start again at the main menu
-		var c = c_red;
-		draw_set_halign(fa_center);
-		
-		draw_text_transformed_color(
-			room_width / 2, 150,
+		draw_text_custom_align(
+			room_width / 2, 200,
 			"GAME OVER",
-			3, 3,
-			0,
-			c, c, c, c, 1
+			3, c_red, 1,
+			fa_center, DEFAULT_VALIGN
 		);
-		draw_text(
+		draw_text_custom_align(
 			room_width / 2, 250,
-			"FINAL SCORE: " + string(score)
+			"FINAL SCORE: " + string(score),
+			1, c_white, 1,
+			fa_center, DEFAULT_VALIGN
 		);
-		draw_text(
+		draw_text_custom_align(
 			room_width / 2, 300,
-			">> PRESS ENTER TO RESTART <<"
+			">> PRESS ENTER TO RESTART <<",
+			1, c_white, 1,
+			fa_center, DEFAULT_VALIGN
 		);
-		
-		draw_set_halign(fa_left);
 		break;
 	//#endregion
 	case room_space:

@@ -13,3 +13,4 @@ hud_style = HUD_STYLE_BLOCK;
 
 event_user(HUD.EVENT_LOAD_STYLE); // load HUD style
 event_user(HUD.EVENT_DISABLE_SHOULD_DRAW); // declaring should draw
+draw_set_font(font_hud);
