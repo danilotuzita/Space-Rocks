@@ -1,8 +1,8 @@
 // "Compiling" macros
-#macro DEBUG true
+#macro DEBUG false
 #macro DEBUGVAL_DEFAULT -9860456786320
 #macro GOD_MODE global.god_mode
-#macro SHADER_ACTIVE false;
+#macro SHADER_ACTIVE true
 
 // MATHMACROS
 #macro E 2.71828

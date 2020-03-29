@@ -32,9 +32,20 @@ switch(room)
 			debris = 50;
 			ore = -1;
 			dramatic = true;
+			value = 0;
 		}
 		break;
 	case room_space:
+		break;
+	case room_test:
+		with(instance_create_layer(0, 0, layer, obj_ship))
+		{
+			x = room_width + 500;
+			y = room_height + 500;
+			can_move = false;
+			image_angle = point_direction(x, y, room_width / 2, room_height / 2);
+			move_towards_point(room_width / 2, room_height / 2, 10);
+		}
 		break;
 	default:
 		break;

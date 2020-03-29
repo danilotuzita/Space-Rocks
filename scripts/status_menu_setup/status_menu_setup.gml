@@ -21,6 +21,7 @@ options_in_column[1] = 1;
 setup_button_ext(0, 1, 60, -40, spr_status_menu_buttons_block, 0, false, 64, 64, 2, 0, status_menu_scr_create_inv_menu, main_hud.hud_acc_color, true, status_menu_btn_ore_draw, -2); // SRCH.ORE
 
 // setting up back button
+/*
 columns = 3;
 options_in_column[2] = 1; // updating options_in_column here so it doesn't fuck up the buttons that auto lines up
 var scale = 4;
@@ -28,5 +29,8 @@ var box_size = 13;
 var raw_x = window_get_width() - (box_size * scale * 1.5); // x
 var raw_y = box_size * scale / 2; // y
 setup_button_ext_raw(0, 2, raw_x, raw_y, main_hud.icons_sprite, HUD_ICON_BACK, false, box_size, box_size, scale, 0, go_back_menu, main_hud.hud_acc_color, true, status_menu_btn1_custom_draw, 0);
+*/
+columns = 2;
+create_back_button();
 
 setup = true;

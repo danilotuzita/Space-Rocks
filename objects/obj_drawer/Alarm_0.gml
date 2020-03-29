@@ -1,0 +1,2 @@
+/// @description had to put the toggle in a alarm, because for some reason the shader initializes incorrectly if without it (put alarm[0] = 1 to see)
+scr_CRT_init_shader(view_camera[0], false, 0.0, true, false, true, 0.03, 80.0, 1.0, true, 0.175); // init shader

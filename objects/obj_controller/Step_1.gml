@@ -1,3 +1,4 @@
+if (select) game_end();
 if (not active) return event_user(CONTROLLER.EVENT_RESET_ALL); // doesn't return anything just didn't want to open brackets
 
 if(!mouse_set_to_center) // BUG FIX #20 | Fix cursor starting position

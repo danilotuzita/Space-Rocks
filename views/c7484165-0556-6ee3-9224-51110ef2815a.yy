@@ -10,7 +10,8 @@
         "ad7bf30b-34de-f514-a98d-bc225d87eedc",
         "7f35faf4-abbf-4f1e-8674-89fbc253c3e2",
         "a797603b-a68b-8e03-6eb5-219b68f2e9b7",
-        "30acb94e-ea2f-77c7-52ef-0e0907a1e056"
+        "30acb94e-ea2f-77c7-52ef-0e0907a1e056",
+        "017772bd-8545-09b2-beb6-5e43ba6ec92a"
     ],
     "filterType": "GMScript",
     "folderName": "pause_menu",

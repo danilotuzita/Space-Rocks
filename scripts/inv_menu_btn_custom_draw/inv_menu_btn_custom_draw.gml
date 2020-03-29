@@ -1,21 +1,23 @@
 /// @param i
 var i = argument0;
-
+/*
 var spr = buttons[# i, 8];
 var sub_spr = buttons[# i, 3];
 var scl = buttons[# i, 7];
 var _x = buttons[# i, 1];
 var _y = buttons[# i, 2];
+var w = buttons[# i, 5];
+var h = buttons[# i, 6];
 var rot = buttons[# i, 9];
 var c = buttons[# i,  0] == cursor_pos ? // if the cursor_pos is the button index
         buttons[# i, 11] : // button acc color
         main_hud.hud_color;
 
 if(buttons[# i, 4]) // if has outline
-    draw_rectangle_color_alpha(
-        _x, _y, // x, y
-        _x + buttons[# i, 5], _y + buttons[# i, 6], // x + width, y + height
-        c, c, c, c, true, main_hud.hud_alpha
+    draw_rectangle_outline(
+        _x, _y,
+        _x + w, _y + h,
+        c, scl, main_hud.hud_alpha
     );
 
 draw_sprite_ext(
@@ -35,5 +37,9 @@ draw_text_custom_align(
     main_hud.hud_alpha,
     fa_center, DEFAULT_VALIGN
 );
+*/
+
+buttons[# i, 13] = global.player.inv.items[# i, 0];
+draw_button_text(i);
 
 return true;

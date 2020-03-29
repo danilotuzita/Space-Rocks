@@ -1,5 +1,4 @@
 //#region Player Input Handling
-	if (controller.select) game_end();
 	//#region movement and rotation
 	_x = controller.right - controller.left + controller.leftX; // dpad left/right + horizontal axis
 	_y =  controller.down - controller.up   + controller.leftY; // dpad   up/down  + vertical axis

@@ -8,6 +8,7 @@ var asteroid = instance_create_layer(_x, _y, "Instances", obj_asteroid);
 
 with (asteroid)
 {
+    value = 10;
     sprite_index = sprite <= 0 ? // if sprite is not provided
         choose(spr_asteroid_small, spr_asteroid_medium, spr_asteroid_huge) : // choose a random sprite
         sprite; // sets the provided sprite

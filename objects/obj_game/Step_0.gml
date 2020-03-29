@@ -31,5 +31,5 @@ switch(room)
 		break;
 	case room_test:
 		if(keyboard_check_pressed(ord("R")))
-			room_restart();
+			game_restart();
 }

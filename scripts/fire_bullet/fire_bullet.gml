@@ -11,6 +11,6 @@ bullet.parent = parent;
 bullet.direction = _angle;
 bullet.damage = damage;
 bullet.image_angle = _angle;
-audio_play_sound(snd_zap, 1, false);
+// audio_play_sound(snd_zap, 1, false);
 
 return bullet;

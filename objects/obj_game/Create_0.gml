@@ -1,5 +1,6 @@
 /// @description Game Create
 randomize();
+window_set_caption("Space Rocks");
 global.debugval = DEBUGVAL_DEFAULT;
 global.game = self;
 global.paused = false;
@@ -9,7 +10,7 @@ lives = 3;
 init_ores();
 global.drawer = instance_create_layer(0, 0, layer, obj_drawer);
 
-GOD_MODE = true;
+GOD_MODE = false;
 
 starting_asteroids = 3; // how many asteroids the game starts
 asteroid_spawn_rate = 3; // seconds between asteroid spawning

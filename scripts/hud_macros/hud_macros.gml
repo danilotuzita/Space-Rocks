@@ -12,6 +12,8 @@
 #macro HUD_ICON_QUIT 5
 #macro HUD_ICON_SETTINGS 6
 #macro HUD_ICON_BACK 7
+#macro HUD_ICON_COG 8
+#macro HUD_ICON_SHADER 9
 
 // dashbar
 #macro HUD_DASHBAR_OUTLINE 0
