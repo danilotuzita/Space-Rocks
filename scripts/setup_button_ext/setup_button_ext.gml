@@ -39,7 +39,7 @@ var i = setup_button_count++;
 
 if (i == 0) // if first button to set up
 {
-    buttons = ds_grid_create(button_options, 14);
+    buttons = ds_grid_create(button_options, GRID_BUTTON_SIZE);
     clickable_buttons = 0;
 }
 

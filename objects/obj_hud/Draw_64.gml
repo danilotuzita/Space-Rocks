@@ -19,6 +19,9 @@ if(draw_f2chargebar)
 if(draw_fire1hint)
     hud_draw_fire1hint();
 
+if(draw_fire3hint)
+    hud_draw_fire3hint();
+
 if(draw_quitting && parent.quitting)
     hud_draw_quitting();
 

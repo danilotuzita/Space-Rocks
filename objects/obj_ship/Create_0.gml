@@ -28,6 +28,7 @@ quit_timeout = 3 * room_speed; // time it takes to quit
 quitting_timer = 0; // quitting timer
 
 // fire1
+fire1_dmg = 1;             // fire1 damage
 fire1_cooldown = 0;        // fire1 cooldown timer
 fire1_cooldown_rate = .20; // fire1 cooldown timer rate
 if GOD_MODE fire1_cooldown_rate = .01; // GOD MODE
@@ -41,6 +42,7 @@ fire2_cooldown = 0;        // fire2 cooldown timer
 fire2_cooldown_rate = 1.5; // fire2 cooldown timer rate
 
 // fire3
+fire3_dmg = .5             // fire3 damage
 fire3_cooldown = 0;        // fire3 cooldown timer
 fire3_cooldown_rate = .50; // fire3 cooldown timer rate
 if GOD_MODE fire3_cooldown_rate = .20; // GOD MODE

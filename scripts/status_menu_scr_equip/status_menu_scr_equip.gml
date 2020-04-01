@@ -1,0 +1,1 @@
+create_sub_menu(create_equip_stats_menu);

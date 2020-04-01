@@ -11,7 +11,8 @@
         "89d59a5c-8c38-5c53-1d66-a573f43f9272",
         "b8ab5186-e4b6-98cc-e1ce-bbf3ad4761d1",
         "00e24b47-6e9d-ee7d-afa9-111d4e9bfc68",
-        "137b229d-2313-700c-c1c3-fc8cb3faa297"
+        "137b229d-2313-700c-c1c3-fc8cb3faa297",
+        "ffe94406-8661-4141-700c-9a5bb1b9871a"
     ],
     "filterType": "GMScript",
     "folderName": "Hud",

@@ -15,16 +15,6 @@
             "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
         },
         {
-            "id": "adc22cb3-5c92-275b-cd13-fbd3fe185e7c",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "eventtype": 2,
-            "enumb": 0,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
-        },
-        {
             "id": "0d7d7d16-5721-68c4-0081-738ef41e0f3c",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -32,6 +22,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 1,
+            "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
+        },
+        {
+            "id": "adc22cb3-5c92-275b-cd13-fbd3fe185e7c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "eventtype": 2,
+            "enumb": 0,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
         },
         {
@@ -62,6 +62,26 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 11,
             "eventtype": 7,
+            "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
+        },
+        {
+            "id": "dc70f11a-9620-288d-5b1f-5e274f560b80",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "eventtype": 7,
+            "enumb": 12,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
+        },
+        {
+            "id": "2fa1302b-8acd-6466-540d-5529d5155bb7",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "eventtype": 7,
+            "enumb": 13,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "m_owner": "c804ac61-fe85-49c0-8c2e-567e86dd763b"
         },
         {

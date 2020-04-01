@@ -66,7 +66,7 @@
 		fire3_cooldown = fire3_cooldown_rate * room_speed; // sets fire2 cooldown
 		var half = fire3_bullet_count / 2;
 		for(var i = -half; i < half; i++)
-			with(fire_bullet(x, y, image_angle + (i * fire3_spread), .5, self)) // creates the bullet
+			with(fire_bullet(x, y, image_angle + (i * fire3_spread), fire3_dmg, self)) // creates the bullet
 				image_alpha = .75;
 
 		var lrumble = 0.05;
@@ -81,7 +81,7 @@
 	if(controller.fire1 && fire1_cooldown <= 0 && !fire2_charge && fire3_cooldown <= 0)
 	{
 		fire1_cooldown = fire1_cooldown_rate * room_speed; // sets fire1 cooldown
-		with(fire_bullet(x, y, image_angle, 1, self)) // creates the bullet
+		with(fire_bullet(x, y, image_angle, fire1_dmg, self)) // creates the bullet
 			image_xscale = 2;
 
 		set_rumble(0, .15, .1, 0, 0); // fire1 rumble

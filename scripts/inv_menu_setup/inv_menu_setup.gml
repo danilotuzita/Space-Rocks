@@ -13,7 +13,7 @@ menu_x += window_get_width() / 2;  menu_x -= menu_width / 2;  // x to the center
 menu_y += window_get_height() / 2; menu_y -= menu_height / 2; // y to the center and offsetting origin
 
 auto_line_up = true;
-button_options = ORES.COUNT + 1;
+button_options = ORES.COUNT;
 columns = 1;
 options_in_column[0] = ORES.COUNT;
 

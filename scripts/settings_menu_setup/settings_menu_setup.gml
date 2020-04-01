@@ -10,7 +10,7 @@ menu_x += window_get_width() / 2;  menu_x -= menu_width / 2;  // x to the center
 menu_y += window_get_height() / 2; menu_y -= menu_height / 2; // y to the center and offsetting origin
 auto_line_up = true; // automatically calculates the x and y position for the buttons based on their indexes
 
-button_options = 3;
+button_options = 2;
 columns = 1;
 options_in_column[0] = 2;
 

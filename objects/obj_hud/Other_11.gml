@@ -1,5 +1,6 @@
 /// @description reload should_draw
 event_user(HUD.EVENT_DISABLE_SHOULD_DRAW);
+cursor_index = HUD_CURSOR_AIM;
 
 switch(room)
 {

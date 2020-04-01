@@ -25,5 +25,5 @@ shader_set(shd_CRT_shader);
     shader_set_uniform_f(uni_timer, get_timer());
     
     //draw_surface_stretched(_crt_surf, 0, 0, camera_get_view_width(_crt_camera), camera_get_view_height(_crt_camera));
-    draw_surface_fill(_crt_surf, 0, 0, progress, 4, 0, 0.1, 0.05, 1);
+    draw_surface_fill(_crt_surf, 0, 0, progress, dir, 0, 0.1, 0.05, 1);
 shader_reset();

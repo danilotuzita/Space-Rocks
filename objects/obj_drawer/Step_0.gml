@@ -6,6 +6,5 @@ if(keyboard_check_released(ord("H")))
 
 if(keyboard_check_released(ord("R"))) // reseting turning on effect
 { 
-    mp = -mp;
-    last_tick = tick;
+    event_user(DRAWER.EVENT_INVERT_PROGRESS);
 }

@@ -1,6 +1,5 @@
 /// @description disable should_draw
 draw_cursor = false; // does not depend on the other_room_start
-cursor_index = HUD_CURSOR_AIM;
 
 // should draw modules
 draw_kin = false;

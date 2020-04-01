@@ -1,5 +1,5 @@
 // "Compiling" macros
-#macro DEBUG false
+#macro DEBUG true
 #macro DEBUGVAL_DEFAULT -9860456786320
 #macro GOD_MODE global.god_mode
 #macro SHADER_ACTIVE true
@@ -102,8 +102,12 @@ enum DRAWER
 {
     // events
     EVENT_TOGGLE = 0,
-    EVENT_SET_HUD_SURFACE = 1
-    //EVENT_SET_GAME_SURFACE = 1,
+    EVENT_SET_HUD_SURFACE = 1,
+    EVENT_RESET_PROGRESS = 2,
+    EVENT_INVERT_PROGRESS = 3,
+    
+    // alarms
+    ALARM_TOGGLE = 1
 }
 
 // OTHER

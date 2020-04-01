@@ -7,9 +7,10 @@ if (progress < 1) // if the hud is not up (the hud_surface already has the appli
     draw_surface(application_surface, 0, 0); // drawing application_surface (every obj.event.draw())
 scr_CRT_apply_to_surface(hud_surface, view_camera[0]); // drawing hud_surface
 
+var toggle_real_time = room_speed * toggle_time;
 var curr_tick = tick - last_tick;
-var a = ratio(curr_tick / room_speed, 0, max_progress, -5, 5) * mp;
+var a = ratio(curr_tick / toggle_real_time, 0, max_progress, -5, 5) * mp;
 if (between(a, -5, 5, false))
     progress = sigma(a);
 else
-    progress = (curr_tick >= room_speed) * mp;
+    progress = (curr_tick >= toggle_real_time) * mp;

@@ -1,5 +1,5 @@
 /// @description Handle Input
-if (controller.accept || mouse_check_button_pressed(mb_left))
+if (controller.accept || mouse_check_button_released(mb_left))
     return event_user(HUD_MENU.EVENT_ACCEPT);
 if (controller.cancel || controller.pause)
     return event_user(HUD_MENU.EVENT_CANCEL);
